@@ -7,20 +7,20 @@
 
 # Site settings
 title: 没长正的技术专栏
-brief-intro: Android and Python Coder
+brief-intro: Coder
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://643435675.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
 # other links
-twitter_username: #gaohaoyang126
-facebook_username: #gaohaoyang.water
+twitter_username: xsj34567@163.com
+facebook_username: #xsj34567.water
 github_username:  xsj34567
 email: xsj34567@1163.com
 weibo_username: 
 zhihu_username: 
-linkedIn_username: gaohaoyang
+linkedIn_username: xsj34567
 dribbble_username:
 
 description_footer: 来自没长正的个人专栏！
