@@ -1,4 +1,4 @@
----
+2015-06-11-JavaScript-function.md---
 layout: post
 title:  "JavaScript 函数"
 date:   2015-06-11 14:06:05
