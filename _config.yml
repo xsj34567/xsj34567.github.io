@@ -9,7 +9,7 @@
 title: 没长正的技术专栏
 brief-intro: Coder
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://643435675.github.io" # the base hostname & protocol for your site
+url: "https://xsj34567.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
