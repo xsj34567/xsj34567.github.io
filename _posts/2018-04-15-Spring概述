@@ -1,0 +1,54 @@
+---
+layout: post
+title: "Spring概述"
+date: 2018-04-15
+categories: 框架
+tags: 框架 Spring
+---
+* content
+{:toc}
+## Spring概述
+
+​	Context是入口
+
+定位   用的 Reader 结尾的
+
+
+加载   BeanDefinition保存类信息，包括OOP关系
+
+
+注册   Factroy、Context 就是把用户所定义的Bean放到IOC容器中（Map）
+
+
+
+## IOC实现原理
+
+围绕Bean来展开
+
+BeanFactory来创建的
+
+reader   load
+
+do开头的都是具体干活
+
+
+
+ClassPathXmlApplicationContext   通过main方法启动
+
+DispatchServlet
+
+FileSystem
+
+Plugin
+
+Lisenter
+
+
+
+parseBeanDefinitions 方法实际是解析xml，把xml中的内容变成BeanDefinition
+
+参考图示：
+
+![](https://github.com/xsj34567/xsj34567.github.io/tree/master/image/2018-04-15_Spring系统概述及IOC实现原理_课堂笔记.png)
+
+![](/Users/xushijian/git/opensource/blog/xsj34567.github.io/image/2018-04-15_Spring系统概述及IOC实现原理_课堂笔记.png)
