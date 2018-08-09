@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SpringBoot系列-初体验(1)"
-date:   2018-06-11
+date:   2018-06-01
 categories: SpringBoot
 tags: SpringBoot
 ---
@@ -28,7 +28,7 @@ java -jar /target/springboot-start-0.0.1-SNAPSHOT.jar
 
 启动结果如下：
 
-```
+```java
 2018-08-09 11:49:06.982  INFO 14061 --- [           main] c.m.s.SpringbootStartApplication         : Started SpringbootStartApplication in 4.985 seconds (JVM running for 7.065)
 ```
 
@@ -40,22 +40,22 @@ java -jar /target/springboot-start-0.0.1-SNAPSHOT.jar
 
 ​	1. mvn install 之后，会生成`springboot-start-0.0.1-SNAPSHOT.jar`、`springboot-start-0.0.1-SNAPSHOT.jar.original`包
 
-```
+```java
 springboot-start-0.0.1-SNAPSHOT.jar  -->spring boot maven插件生成的jar包，里面包含了应用的依赖，以及spring boot相关的类
 springboot-start-0.0.1-SNAPSHOT.jar.original -->默认的maven-jar-plugin生成的包
 ```
 
 2.分析springboot-start-0.0.1-SNAPSHOT.jar 目录结构
 
-```
+```java
 ├── BOOT-INF
 |   └──classes
-|	|   └──com
-|	|		└── mzz
-|	|			└── springbootstart
-|   |    			 └── SpringbootStartApplication.class
-|	|	
-│ 	├── lib
+|	   └──com
+|		  └──mzz
+|			└──springbootstart
+|       		└──SpringbootStartApplication.class
+|		
+│   ├── lib
 │   ├── aopalliance-1.0.jar
 │   ├── spring-beans-4.2.3.RELEASE.jar
 │   ├── ...  	
@@ -93,7 +93,7 @@ springboot-start-0.0.1-SNAPSHOT.jar.original -->默认的maven-jar-plugin生成�
 
 - META-INF：
 
-  ```
+  ```java
   Manifest-Version: 1.0
   Implementation-Title: springboot-start
   Implementation-Version: 0.0.1-SNAPSHOT
