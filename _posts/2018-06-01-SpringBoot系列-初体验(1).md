@@ -15,7 +15,7 @@ tags: SpringBoot
 #### 示例项目
 
 ​	快速构建项目：https://start.spring.io/  或
-	[采用示例](https://gitee.com/xushj/springboot-start.git)  执行如下命令
+	采用[示例](https://gitee.com/xushj/springboot-start.git)  执行如下命令
 
 
 ```java
@@ -110,10 +110,10 @@ springboot-start-0.0.1-SNAPSHOT.jar.original -->默认的maven-jar-plugin生成�
    ot-starter-parent/springboot-start
   ```
 
-  - Main-Class: org.springframework.boot.loader.JarLauncher 是jar启动的入口
-  - Start-Class：com.mzz.springbootstart.SpringbootStartApplication 是我们系统启动的入口
+  - Main-Class: `org.springframework.boot.loader.JarLauncher` 是jar启动的入口
+  - Start-Class：`com.mzz.springbootstart.SpringbootStartApplication` 是我们系统启动的入口
 
-- org.springframework.boot.loader: 需要加载的.class的目录
+- `org.springframework.boot.loader`: 需要加载的.class的目录
 
   - achive： 归档文件
   - ....
@@ -216,3 +216,11 @@ springboot-start-0.0.1-SNAPSHOT.jar.original -->默认的maven-jar-plugin生成�
 ## 总结
 
 ​	本文简单介绍了SpringBoot如何启动，详细启动，可结合Spring启动做比较。 
+
+
+
+### 参考资料
+
+​	[https://spring.io/guides/gs/spring-boot/](https://spring.io/guides/gs/spring-boot/)
+
+​	[https://blog.csdn.net/forezp/article/details/70341651](https://blog.csdn.net/forezp/article/details/70341651)
