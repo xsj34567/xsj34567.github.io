@@ -32,9 +32,88 @@ java -jar /target/springboot-start-0.0.1-SNAPSHOT.jar
 2018-08-09 11:49:06.982  INFO 14061 --- [           main] c.m.s.SpringbootStartApplication         : Started SpringbootStartApplication in 4.985 seconds (JVM running for 7.065)
 ```
 
-
-
 ## SpringBoot 分析
+
+### [基本特征](https://docs.spring.io/spring-boot/docs/2.0.4.RELEASE/reference/htmlsingle/)
+
+- 应用分为两个方面：功能性、非功能性
+
+  - 功能性：系统所设计的业务范畴
+  - 非功能性：安全、性能、监控、数据指标（CPU利用率、网卡使用率）
+
+  Spring Boot 规约大于配置，大多数组件，不需要自行配置，而是自动组装！简化开发，大多数情况，使用默认即可！
+
+  production-ready 就是非功能性范畴！
+
+  
+
+- [嵌入式容器：](https://docs.spring.io/spring-boot/docs/2.0.4.RELEASE/reference/htmlsingle/#howto-embedded-web-servers) 独立Spring 应用，不需要外部依赖，依赖容器（Tomcat）
+
+  - `Tomcat`、 `Jetty`、`Undertow`
+
+    
+
+- [外部配置](https://docs.spring.io/spring-boot/docs/2.0.4.RELEASE/reference/htmlsingle/#boot-features-external-config)：
+
+  - 启动参数
+
+  - 配置文件
+
+  - 环境变量
+
+  - ...
+
+    
+
+- 外部应用：
+
+  - Servlet 应用
+
+  - Spring Web MVC
+
+  - Spring Web Flux
+
+  - [WebSocket](https://docs.spring.io/spring-boot/docs/2.0.4.RELEASE/reference/htmlsingle/#boot-features-websockets)
+
+  - WebService
+
+  - ...
+
+    
+
+- SQL：
+
+  - JDBC、JPA、ORM ...
+
+    
+
+- [NoSQL（Not Only SQL）：](https://docs.spring.io/spring-boot/docs/2.0.4.RELEASE/reference/htmlsingle/#boot-features-nosql)
+
+  - Redis、ElasticSearch、Hbase ...
+
+
+
+- Reactive
+  - Mono : 0 - 1 元素，Optional
+  - Flux：0 - N 个元素，类似于 Iterable 或者 Collection
+
+Req -> WebFlux -> 1 - N 线程执行任务执行函数式任务
+
+它是推的方式！
+
+Java 9 里面API 称之为 Flow（流）
+
+​	Publisher -> publish(1)
+
+​	Subscription（1）：订阅消息
+
+​	Subs(A)#onNext() -> Subs(B)#onNext() -> Subs(C)#onNext()
+
+
+
+​	Reactive 是推模式（Push）
+
+​	Iterator 是拉模式（Pull）
 
 ### 项目如何启动
 
@@ -44,6 +123,8 @@ java -jar /target/springboot-start-0.0.1-SNAPSHOT.jar
 springboot-start-0.0.1-SNAPSHOT.jar  -->spring boot maven插件生成的jar包，里面包含了应用的依赖，以及spring boot相关的类
 springboot-start-0.0.1-SNAPSHOT.jar.original -->默认的maven-jar-plugin生成的包
 ```
+
+
 
 2.分析springboot-start-0.0.1-SNAPSHOT.jar 目录结构
 
@@ -118,7 +199,11 @@ springboot-start-0.0.1-SNAPSHOT.jar.original -->默认的maven-jar-plugin生成�
   - achive： 归档文件
   - ....
 
+* 除了 jar 或者 war 启动的方式，还有目录启动方式
 
+  * 目录启动方式可以帮助解决老旧的jar 不支持 Spring Boot 新方式，比如老版本的 MyBatis
+    * 如果是 jar 包，解压后，跳转解压目录，并且执行`java`命令启动，启动类是 org.springframework.boot.loader.JarLauncher
+    * 如果是 war包，解压后，跳转解压目录，并且执行`java`命令启动类是org.springframework.boot.loader.WarLauncher
 
 
 
@@ -223,4 +308,6 @@ springboot-start-0.0.1-SNAPSHOT.jar.original -->默认的maven-jar-plugin生成�
 
 ​	[https://spring.io/guides/gs/spring-boot/](https://spring.io/guides/gs/spring-boot/)
 
-​	[https://blog.csdn.net/forezp/article/details/70341651](https://blog.csdn.net/forezp/article/details/70341651)
+​	[方志鹏博客](https://blog.csdn.net/forezp/article/details/70341651)
+
+​	[Jar规范-官网](https://docs.oracle.com/javase/8/docs/technotes/guides/jar/jar.html)
