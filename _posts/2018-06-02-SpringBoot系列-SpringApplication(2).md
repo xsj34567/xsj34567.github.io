@@ -11,6 +11,10 @@ tags: SpringBoot SpringApplication
 
 ## SpringApplication
 
+  介绍SpringApplication启动,用Spring实现类似的功能。
+
+
+
 ### 自定义 SpringApplication  (Spring)
 
 ​	介绍 `SpringApplication ` `SpringApplicationBuilder `API 调整
