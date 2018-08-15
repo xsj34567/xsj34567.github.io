@@ -8,9 +8,10 @@ tags: SpringBoot SpringApplication
 
 * content
 {:toc}
+
 ## SpringApplication
 
-  ### 自定义 SpringApplication  (Spring)
+### 自定义 SpringApplication  (Spring)
 
 ​	介绍 `SpringApplication ` `SpringApplicationBuilder `API 调整
 

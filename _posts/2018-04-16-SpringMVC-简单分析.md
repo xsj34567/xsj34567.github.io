@@ -8,6 +8,7 @@ tags: Spring SpringMVC
 
 * content
 {:toc}
+
 ## SpringMVC工作机制
 
 ​	  在容器初始化时会建立所有 url 和 Controller 的对应关系,保存到 `Map<url,Controller>` 中.Tomcat 启动时会通知 Spring 初始化容器(加载 Bean 的定义信息和初始化所有单例 Bean),然后 SpringMVC 会遍历容器中的 Bean,获取每一个 Controller 中的所有方法访问的 url,然后将 url 和 Controller 保存到一个 Map 中; 
