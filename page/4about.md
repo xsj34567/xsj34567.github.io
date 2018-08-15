@@ -13,6 +13,7 @@ type: page
 
 <iframe src="https://githubbadge.appspot.com/gaohaoyang?s=1" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
 
+
 学习是一个非常愉快的过程。共同加油！
 
 
@@ -27,6 +28,7 @@ type: page
 
 ## 关于本站
 
+	欢迎拍砖，多多交流，转载注明出处：[没长正的技术专栏](http://blog.meizhangzheng.com)
 
 ## 友情链接
 
