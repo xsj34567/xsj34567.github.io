@@ -19,13 +19,9 @@ type: page
 
 ## 联系我
 
-* GitHub：[没长正](https://github.com/xsj34567)
-* email：xsj34567@163.com
-* [Weibo] 
-* [知乎]
-* [Facebook]
-* [Twitter]()
-* [云盘资源-pwd:]()
+* [GitHub](https://github.com/xsj34567)
+* [Email](xsj34567@163.com)
+* [Weibo](我勒个去)xsj34567@163.com
 
 ## 关于本站
 
@@ -33,9 +29,14 @@ type: page
 
 ## 友情链接
 
+`标准：`
+[小马哥](https://github.com/mercyblitz/jsr)
+[Java 标准](https://www.jcp.org/en/home/index)
 
+
+`框架:`
 [MyBatis中国分站](http://www.mybatis.cn/)
-[羡辙杂俎](http://zhangwenli.com/blog) \| [Anotherhome](https://www.anotherhome.net) \| [Reverland](http://reverland.org/) \| [ZhiLi](http://lizhipower.github.io/) \| [Simmer](http://simmer-jun.github.io/) \| [awthink](http://awthink.net/) \| [Aralic](http://aralic.github.io/) \| [zchen9](http://www.chen9.info/) \| [wuhuaji](http://wuhuaji.me/) \| [lisheng](http://www.lishengcn.cn/) \| [薛彬XueBin](http://axuebin.com/blog/) \| [TBOOX](http://www.tboox.org/cn/) \|  [Ling](http://linglinyp.com/)
+
 
 ## Comments
 
