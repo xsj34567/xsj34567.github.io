@@ -24,7 +24,7 @@ type: page
 
 ## 关于本站
 
-	欢迎拍砖，多多交流，转载注明出处：[没长正的技术专栏](http://blog.meizhangzheng.com)
+欢迎拍砖，多多交流，转载注明出处： [没长正的技术专栏 http://blog.meizhangzheng.com](http://blog.meizhangzheng.com)
 
 ## 友情链接
 
