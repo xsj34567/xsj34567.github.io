@@ -11,7 +11,6 @@ type: page
 
 ## 关于我
 
-<iframe src="https://githubbadge.appspot.com/gaohaoyang?s=1" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
 
 
 学习是一个非常愉快的过程。共同加油！
@@ -21,7 +20,7 @@ type: page
 
 * [GitHub](https://github.com/xsj34567)
 * [Email](xsj34567@163.com)
-* [Weibo](我勒个去)xsj34567@163.com
+* [Weibo](xsj34567@163.com)
 
 ## 关于本站
 
