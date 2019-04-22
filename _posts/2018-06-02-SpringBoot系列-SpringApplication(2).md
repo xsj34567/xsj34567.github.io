@@ -221,4 +221,4 @@ private WebApplicationType deduceWebApplicationType() {
 
 
 
-参考：[GP-小马哥](https://www.gupaoedu.com/team.html)
+参考：[小马哥](https://github.com/mercyblitz)

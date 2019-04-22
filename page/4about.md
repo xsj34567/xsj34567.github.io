@@ -18,18 +18,18 @@ type: page
 
 ## 联系我
 
-* [GitHub](https://github.com/xsj34567)x
-* [Email](xsj34567@163.com)
+* [GitHub](https://github.com/xsj34567)
+* [Email:xsj34567@163.com](xsj34567@163.com)
 * [Weibo](xsj34567@163.com)
 
 ## 关于本站
 
-欢迎拍砖，多多交流，转载注明出处： [没长正的技术专栏 http://blog.meizhangzheng.com](http://blog.meizhangzheng.com)
+欢迎拍砖，多多交流，转载注明出处： [没长正的技术专栏 http://blog.meizhangzheng.com](http://blog.meizhangzheng.com) 如涉及侵权问题，请发送邮件到xsj34567@163.com，本人将会尽快删除。```文章中的日期部分并非实际写文章日期，只是为了文章排版需要。```
 
 ## 友情链接
 
 `标准：`
-[小马哥](https://github.com/mercyblitz/jsr)、
+[小马哥](https://github.com/mercyblitz)、
 [Java 标准](https://www.jcp.org/en/home/index)
 
 
