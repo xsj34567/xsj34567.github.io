@@ -19,7 +19,7 @@ type: page
 ## 联系我
 
 * [GitHub](https://github.com/xsj34567)
-* [Email:xsj34567@163.com](xsj34567@163.com)
+* [Email：xsj34567@163.com](xsj34567@163.com)
 * [Weibo](xsj34567@163.com)
 
 ## 关于本站
