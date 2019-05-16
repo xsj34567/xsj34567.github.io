@@ -23,7 +23,7 @@ creattime: 2019-05-16 10:29:54
 #### 更新系统软件
 
 (1)内核修复
-```
+```shell
 yum update kernel
 yum update kernel-devel
 yum update kernel-headers
@@ -33,7 +33,7 @@ yum update python-perf
 ```
 
 (2)glibc 安全
-```
+```shell
 yum update glibc
 yum update glibc-common
 yum update glibc-devel
@@ -47,7 +47,7 @@ yum update nscd
 
 (4)NetworkManager 和 libnl3 安全和BUG修复更新
 
-```
+```shell
 yum update libnl3
 yum update NetworkManager
 yum update NetworkManager-libnm
@@ -62,7 +62,7 @@ yum update NetworkManager-wifi
 ```yum update procps-ng ```
 
 (7)systemd 安全更新
-```
+```shell
 yum update libgudev1
 yum update systemd
 yum update systemd-libs
@@ -70,7 +70,7 @@ yum update systemd-sysv
 ```
 
 (8)openssh 安全更新
-```
+```shell
 yum update openssh
 yum update openssh-clients
 yum update openssh-server
@@ -87,9 +87,9 @@ yum update openssh-server
 #### 系统参数设置
 
 (1)确保SSH MaxAuthTries设置为3到6之间 | 服务配置
-```描述
+```
+描述
 设置较低的Max AuthTrimes参数将降低SSH服务器被暴力攻击成功的风险。
-
 加固建议
 在/etc/ssh/sshd_config中取消MaxAuthTries注释符号，设置最大密码尝试失败次数3-6，建议为4：MaxAuthTries 4
 ```
