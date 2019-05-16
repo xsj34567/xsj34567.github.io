@@ -1,23 +1,28 @@
 ---
 layout: post
 title:  "系统安全"
-date:   2019-05-16 10:29:54
+date:   2013-01-12 10:29:54
 categories: windows/Linux/Mac
 tags: windows Linux Mac
+creattime: 2019-05-16 10:29:54
 ---
 
 * content
 {:toc}
 系统安全：杀毒软件、基本安全防护、WEB安全防护等
 
+
 ## Linux 安全
 
+    杀毒软件、登录、注销、软件 软件更新等等
+
 ### 基本防护
+
+    更新软件、系统参数配置
 
 #### 更新系统软件
 
 ```
-
  (1)内核修复
     yum update kernel
     yum update kernel-devel
@@ -129,5 +134,3 @@ tags: windows Linux Mac
 阿里云标准-CentOS Linux 7安全基线检查
 
 [CentOS通过日志反查入侵](https://www.landui.com/help/show-2714.html)
-
-
