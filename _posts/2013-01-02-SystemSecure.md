@@ -125,6 +125,9 @@ ClientAliveCountMax 2
 
 #### [系统操作监控配置](https://www.landui.com/help/show-2714.html)
 
+```
+  *** 可在 /tmp/dbasky/root 目录下查看 IP+时间段 操作记录 
+```
 
 
 参考：
