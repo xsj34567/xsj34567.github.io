@@ -129,9 +129,12 @@ ClientAliveCountMax 2
   *** 可在 /tmp/dbasky/root 目录下查看 IP+时间段 操作记录 
 ```
 
+#### [clamav完整查杀linux病毒实战](https://www.cnblogs.com/k98091518/p/6895078.html)
 
 参考：
 
 阿里云标准-CentOS Linux 7安全基线检查
 
 [CentOS通过日志反查入侵](https://www.landui.com/help/show-2714.html)
+
+[clamav完整查杀linux病毒实战](https://www.cnblogs.com/k98091518/p/6895078.html)
