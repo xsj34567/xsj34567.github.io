@@ -138,3 +138,5 @@ ClientAliveCountMax 2
 [CentOS通过日志反查入侵](https://www.landui.com/help/show-2714.html)
 
 [clamav完整查杀linux病毒实战](https://www.cnblogs.com/k98091518/p/6895078.html)
+
+[yum 命令](https://www.runoob.com/linux/linux-yum.html) 检查软件待更新清单、更新、移除实例
