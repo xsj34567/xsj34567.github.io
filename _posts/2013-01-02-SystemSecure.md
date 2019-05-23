@@ -131,6 +131,13 @@ ClientAliveCountMax 2
 
 #### [clamav完整查杀linux病毒实战](https://www.cnblogs.com/k98091518/p/6895078.html)
 
+####[阿里云mail发送邮件](https://blog.csdn.net/cbuy888/article/details/88287883) 163、126、QQ邮箱类似
+
+```
+  可以将clamav查询的结果（其他任务的结果），发送到邮箱
+```
+
+
 参考：
 
 阿里云标准-CentOS Linux 7安全基线检查
@@ -140,3 +147,7 @@ ClientAliveCountMax 2
 [clamav完整查杀linux病毒实战](https://www.cnblogs.com/k98091518/p/6895078.html)
 
 [yum 命令](https://www.runoob.com/linux/linux-yum.html) 检查软件待更新清单、更新、移除实例
+
+[阿里云mail发送邮件](https://blog.csdn.net/cbuy888/article/details/88287883)
+
+[linux下使用自带mail发送邮件](https://www.cnblogs.com/shenjianyu/p/6406241.html)
