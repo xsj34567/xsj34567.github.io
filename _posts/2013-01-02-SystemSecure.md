@@ -150,4 +150,4 @@ ClientAliveCountMax 2
 
 [阿里云mail发送邮件](https://blog.csdn.net/cbuy888/article/details/88287883)
 
-[linux下使用自带mail发送邮件](https://www.cnblogs.com/shenjianyu/p/6406241.html)
+[linux下使用自带mail发送邮件](https://blog.csdn.net/qq_39680564/article/details/82746812)
