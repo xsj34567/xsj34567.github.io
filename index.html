@@ -14,7 +14,7 @@ layout: default
                   <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                 </h2>
                 <div class="label">
-                    <div class="label-card">
+                    <div class="label-card" title="文章排版时间">
                         <i class="fa fa-calendar"></i>{{ post.date | date: "%F" }}
                     </div>
                     <div class="label-card">
@@ -32,7 +32,7 @@ layout: default
                     <div class="label-card">
                     {% include tag.html %}
                     </div>
-                    <div class="label-card">
+                    <div class="label-card" title="最后更新时间">
                         {% if page.updateTime %}<i class="fa fa-calendar"></i>{{ page.updateTime }}
                         {% endif %}
                     </div>

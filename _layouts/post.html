@@ -7,7 +7,7 @@ layout: default
         <h1>{{page.title}}</h1>
         <div class="label">
 
-            <div class="label-card">
+            <div class="label-card" title="文章排版时间">
                 <i class="fa fa-calendar"></i>{{ page.date | date: "%F" }}
             </div>
 
@@ -29,8 +29,8 @@ layout: default
             <div class="label-card">
             {% include tag.html %}
             </div>
-            
-            <div class="label-card">
+
+            <div class="label-card" title="最后更新时间">
                 {% if page.updateTime %}<i class="fa fa-calendar"></i>{{ page.updateTime }}
                 {% endif %}
             </div>
