@@ -237,6 +237,7 @@ google_analytics_id: UA-72449510-4 # google 分析追踪id
 ### 4. 写文章
 
 `_posts`目录下存放文章信息，文章头部注明 layout(布局)、title、date、categories、tags、author(可选)、mathjax(可选，点击[这里](https://www.mathjax.org/)查看更多关于`Mathjax`)，如下：
+[添加文件头部变量](https://jekyllrb.com/docs/front-matter/)
 
 ```
 ---
