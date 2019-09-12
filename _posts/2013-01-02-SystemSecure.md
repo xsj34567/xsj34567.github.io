@@ -138,7 +138,7 @@ ClientAliveCountMax 2
 ```
 
   
-  
+
 ### 参考
 
 阿里云标准-CentOS Linux 7安全基线检查
@@ -152,3 +152,8 @@ ClientAliveCountMax 2
 [阿里云mail发送邮件](https://blog.csdn.net/cbuy888/article/details/88287883)
 
 [linux下使用自带mail发送邮件](https://blog.csdn.net/qq_39680564/article/details/82746812)
+
+```haskell
+敬畏每一行代码，敬畏每一份托付
+```
+
