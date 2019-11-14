@@ -19,6 +19,7 @@ type: page
 ## 联系我
 
 * [GitHub](https://github.com/xsj34567)
+* [Gitee](https://gitee.com/xushj)
 * [Email：xsj34567@163.com](xsj34567@163.com)
 * [Weibo](xsj34567@163.com)
 
