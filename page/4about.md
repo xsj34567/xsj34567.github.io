@@ -12,7 +12,6 @@ type: page
 ## 关于我
 
 
-
 学习是一个非常愉快的过程。共同加油！
 
 
@@ -31,7 +30,6 @@ type: page
 
 `资源：`
 [鸠摩搜索](https://www.jiumodiary.com)
-
 
 
 `标准：`
