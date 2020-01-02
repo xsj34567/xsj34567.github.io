@@ -51,6 +51,10 @@
 </script>
 <script type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  var xhr = new XMLHttpRequest();   
+  xhr.open("GET", "http://blog.meizhangzheng.com/", true);   
+  xhr.withCredentials = true; //支持跨域发送cookies　
+  xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
 </script>
 {% endif %}
 </head>
