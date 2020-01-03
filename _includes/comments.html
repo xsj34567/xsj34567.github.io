@@ -11,8 +11,10 @@ conf: ''
  -->
 
 <!--[if !IE]> -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="/js/gitalk.min.js"></script>
+  {% comment %} <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="/js/gitalk.min.js"></script> {% endcomment %}
+  <link rel="stylesheet" href="http://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css"/>
+  <script src="http://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
   <script src="/js/md5.min.js"></script>
 
 <div id="gitalk-container"></div>
