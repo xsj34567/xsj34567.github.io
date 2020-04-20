@@ -2,8 +2,8 @@
 layout: post
 title:  "系统安全"
 date:   2013-01-02 10:29:54
-categories: windows/Linux/Mac
-tags: windows Linux Mac
+categories: Windows/Linux/Mac
+tags: Windows Linux Mac
 creattime: 2019-05-16 10:29:54
 ---
 
