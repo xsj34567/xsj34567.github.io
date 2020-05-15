@@ -8,8 +8,8 @@
 # Site settings
 title: 没长正的技术专栏
 brief-intro: 勤动手、多思考
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://xushj.gitee.io/xushj.gitee.io" # the base hostname & protocol for your site
+baseurl: "/xushj.gitee.io" # the subpath of your site, e.g. /blog
+url: "http://xushj.gitee.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
