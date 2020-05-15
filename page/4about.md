@@ -24,9 +24,12 @@ type: page
 
 ## 关于本站
 
-欢迎拍砖，多多交流，转载请注明出处： [没长正的技术专栏 http://blog.meizhangzheng.com](http://blog.meizhangzheng.com) 如涉及侵权问题，请发送邮件到xsj34567@163.com，如情况属实本人将会尽快删除。```文章中的日期部分并非实际写文章日期，只是为了文章排版需要。```
+欢迎拍砖，多多交流，转载请注明出处： [没长正的运维专栏 https://xushj.gitee.io/xushj.gitee.io](https://xushj.gitee.io/xushj.gitee.io) 如涉及侵权问题，请发送邮件到xsj34567@163.com，如情况属实本人将会尽快删除。```文章中的日期部分并非实际写文章日期，只是为了文章排版需要。```
 
 ## 友情链接
+
+`技术：`
+[没长正的技术专栏 https://blog.meizhangzheng.com](https://blog.meizhangzheng.com)
 
 `资源：`
 [鸠摩搜索](https://www.jiumodiary.com)
