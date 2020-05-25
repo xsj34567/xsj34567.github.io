@@ -28,6 +28,9 @@ type: page
 
 ## 友情链接
 
+`技术：`
+[没长正的运维专栏 https://xushj.gitee.io/xushj.gitee.io](https://xushj.gitee.io/xushj.gitee.io)
+
 `资源：`
 [鸠摩搜索](https://www.jiumodiary.com)
 
