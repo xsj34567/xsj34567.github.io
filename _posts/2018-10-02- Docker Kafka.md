@@ -94,6 +94,8 @@ chmod +x /usr/local/bin/docker-compose
 
 参考文档：
 
+[Docker 安装](https://www.cnblogs.com/zhaoxxnbsp/p/13065722.html)
+
 [docker-kafka示例文档](https://www.jianshu.com/p/0edcc3addf3f)
 
 [docker-kafka安装文档](https://blog.csdn.net/sayoko06/article/details/104020621)
