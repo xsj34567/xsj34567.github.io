@@ -78,18 +78,27 @@ haha
 docker run -itd --name=kafka-manager -p 9000:9000 -e ZK_HOSTS="127.0.0.1:2181" sheepkiller/kafka-manager
 ```
 
-### Notice
+### 问题
 
-```
+#### 问题1
 
 注： 安装docker-compose (注意版本号：github)
 
-
+```
 curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
 chmod +x /usr/local/bin/docker-compose
 
+```
 
+#### 问题2
+
+```
+Kafka-manager出现错误，Yikes! Ask timed out on [ActorSelection[Anchor(akka://kafka-manager-system/)
+
+
+解决办法：启动kafka-manager后台管理时，修改zk 的ip地址 ，将127.0.01 修改为实际IP
+
+docker run -itd --name=kafka-manager -p 9000:9000 -e ZK_HOSTS="127.0.0.1:2181" sheepkiller/kafka-manager
 
 ```
 
@@ -100,6 +109,8 @@ chmod +x /usr/local/bin/docker-compose
 [docker-kafka示例文档](https://www.jianshu.com/p/0edcc3addf3f)
 
 [docker-kafka安装文档](https://blog.csdn.net/sayoko06/article/details/104020621)
+
+[kafka-manager安装文档](https://cloud.tencent.com/developer/article/1141507)
 
 https://github.com/wurstmeister/kafka-docker/blob/master/Dockerfile
 
