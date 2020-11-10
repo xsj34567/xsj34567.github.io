@@ -78,7 +78,19 @@ haha
 docker run -itd --name=kafka-manager -p 9000:9000 -e ZK_HOSTS="127.0.0.1:2181" sheepkiller/kafka-manager
 ```
 
+### Notice
 
+```
+
+注： 安装docker-compose (注意版本号：github)
+
+
+curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+
+
+
+```
 
 参考文档：
 
