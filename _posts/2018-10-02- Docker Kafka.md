@@ -29,7 +29,8 @@ docker pull wurstmeister/kafka
 
 docker-compose.yml   windows  注意修改相应的IP、主题
 
-```
+```shell script
+
 version: '3'
 services:
   zookeeper:
@@ -76,6 +77,7 @@ haha
 
 # 启动后端管理（展示不能展示，Windows下路径）
 docker run -itd --name=kafka-manager -p 9000:9000 -e ZK_HOSTS="127.0.0.1:2181" sheepkiller/kafka-manager
+
 ```
 
 ### 问题
@@ -84,7 +86,8 @@ docker run -itd --name=kafka-manager -p 9000:9000 -e ZK_HOSTS="127.0.0.1:2181" s
 
 注： 安装docker-compose (注意版本号：github)
 
-```
+```shell script
+
 curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
