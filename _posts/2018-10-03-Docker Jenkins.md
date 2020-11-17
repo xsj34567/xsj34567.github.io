@@ -70,7 +70,8 @@ sed -i  's/http:\/\/www.google.com/http:\/\/www.baidu.com/g' /usr/meizhangzheng/
 
 ```
 
+[gitee-jenkins配置](https://gitee.com/help/articles/4193#article-header12)
 
-[参考jenkins/jenkins](https://www.cnblogs.com/dreammer/p/13670222.html)
+[jenkins/jenkins](https://www.cnblogs.com/dreammer/p/13670222.html)
 
-[参考 docker-jenkins](https://www.cnblogs.com/nhdlb/p/12576273.html)
+[docker-jenkins](https://www.cnblogs.com/nhdlb/p/12576273.html)
