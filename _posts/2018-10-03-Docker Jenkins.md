@@ -62,7 +62,7 @@ sed -i  's/http:\/\/www.google.com/http:\/\/www.baidu.com/g' /usr/meizhangzheng/
 
 ```
 
-# 选择插件 安装 SSH 、Git、Maven等
+# 选择插件 安装 SSH 、Git、Maven ...
 
 # 配置Github、Gitee 账户信息
 
