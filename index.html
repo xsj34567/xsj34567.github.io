@@ -91,9 +91,10 @@ layout: default
                     Categories
                 </div>
                 <ul class="content-ul" cate>
+                    <!-- {{ root_url }}/-->
                     {% for category in site.categories %}
                     <li>
-                        <a href="{{ site.baseurl }}/{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item" cate="{{ category | first }}">
+                        <a href="{{ site.baseurl }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item" cate="{{ category | first }}">
                             <span class="name">
                                 {{ category | first }}
                             </span>

@@ -70,7 +70,11 @@ sed -i  's/http:\/\/www.google.com/http:\/\/www.baidu.com/g' /usr/meizhangzheng/
 
 ```
 
-[gitee-jenkins配置](https://gitee.com/help/articles/4193#article-header12)
+### 参考
+
+[github-jenkins自动构建](https://www.cnblogs.com/weschen/p/6867885.html)
+
+[gitee-jenkins自动构建](https://gitee.com/help/articles/4193)
 
 [jenkins/jenkins](https://www.cnblogs.com/dreammer/p/13670222.html)
 
