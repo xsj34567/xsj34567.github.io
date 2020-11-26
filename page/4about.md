@@ -48,7 +48,7 @@ type: page
 
 `资源：`
 [鸠摩搜索](https://www.jiumodiary.com)
-[专业书籍]()
+[算法](https://github.com/labuladong/fucking-algorithm)
 
 
 `标准：`
