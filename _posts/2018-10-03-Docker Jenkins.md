@@ -2,8 +2,8 @@
 layout: post
 title:  "Docker Jenkins"
 date:   2018-10-03 
-categories: Docker Jenkins 容器
-tags: Docker Jenkins 容器
+categories: Docker Jenkins 容器 实战
+tags: Docker Jenkins 容器 实战
 ---
 
 * content
