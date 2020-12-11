@@ -24,9 +24,9 @@ Extract-Transform-Load: 抽取->转换->加载
 
 加载(Load)：将数据加载到目标系统的所有操作。
 
-## [Kettle Demo](http://www.kettle.net.cn/2108.html)
+## [Kettle Demo](http://www.kettle.net.cn/blog/category/demo/)
 
-
+[项目demo](https://gitee.com/xushj/etl-demo)
 
 。。。
 
