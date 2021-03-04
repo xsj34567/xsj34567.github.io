@@ -147,6 +147,20 @@ Welcome everyone to use this theme, this part shows introduction to use.
 
 This step and Step 5 mainly talk to you how to launch blog at local. If you don't want to launch at local, you can ignore these 2 steps. But I still strongly suggest to do this. Ensure there is nothing wrong before pushing to the github.
 
+[2020-11-11]
+Install rvm
+
+```
+curl -sSL https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer | bash -s stable
+
+```
+
+Install Ruby
+
+```
+rvm install ruby-2.5.1
+```
+
 The Windows users can directly use [RubyInstaller](http://rubyinstaller.org/) to install ruby environment. Follow the prompts while installing.
 
 Install jekyll commands:
