@@ -30,7 +30,26 @@ Extract-Transform-Load: 抽取->转换->加载
 
 。。。
 
+## 常见问题
 
+```
+
+1. 编码问题处理方式
+
+	<1. 启动时设置编码格式 UTF-8;
+	<2. 检查数据库格式是否为UTF-8;
+	<3. 工具平台是否为UTF-8；
+	<4. 数据抽取时设置编码格式： characterEncoding UTF-8
+	<5. 通过外部程序处理（Java、Python等处理数据格式）
+
+2. 换行问题： \r\n
+
+	<1. 程序抽取式处理
+
+
+
+
+```
 
 ## 参考资料
 
@@ -43,3 +62,8 @@ Extract-Transform-Load: 抽取->转换->加载
 [Datax-Web](https://github.com/WeiYe-Jing/datax-web)
 
 [ETL工具对比](https://www.cnblogs.com/DataPipeline2018/p/11131723.html)  偏向性较强
+
+[Kettle 组件文档]
+
+链接：https://pan.baidu.com/s/1DAOzqGHJId1KWR1Eb58RFQ 
+提取码：95md 
