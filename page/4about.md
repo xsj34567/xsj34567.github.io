@@ -45,7 +45,7 @@ type: page
 
 `技术：`
 [没长正的技术专栏 https://blog.meizhangzheng.com](https://blog.meizhangzheng.com)
-
+[常用工具网站](http://tooool.org/)
 
 `资源：`
 [鸠摩搜索](https://www.jiumodiary.com)
