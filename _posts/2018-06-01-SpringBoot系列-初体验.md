@@ -9,17 +9,17 @@ tags: SpringBoot
 * content
 {:toc}
 
-## SpringBoot 示例
+## 一、SpringBoot 示例
    主要分析了SpringBoot启动过程，SpringBoot 2.X的变化功能。
 
 
 
-### SpringBoot 初体验
+### 1.SpringBoot 初体验
 
-#### 示例项目
+#### 1.1示例项目
 
 ​	快速构建项目：https://start.spring.io/  或
-	采用[示例](https://gitee.com/xushj/springboot-start.git)  执行如下命令
+​	采用[示例](https://gitee.com/xushj/springboot-start.git)  执行如下命令
 
 
 ```java
@@ -36,9 +36,9 @@ java -jar /target/springboot-start-0.0.1-SNAPSHOT.jar
 2018-08-09 11:49:06.982  INFO 14061 --- [           main] c.m.s.SpringbootStartApplication         : Started SpringbootStartApplication in 4.985 seconds (JVM running for 7.065)
 ```
 
-## SpringBoot 分析
+## 二、SpringBoot 分析
 
-### [基本特征](https://docs.spring.io/spring-boot/docs/2.0.4.RELEASE/reference/htmlsingle/)
+### 1.[基本特征](https://docs.spring.io/spring-boot/docs/2.0.4.RELEASE/reference/htmlsingle/)
 
 - 应用分为两个方面：功能性、非功能性
 
@@ -119,7 +119,7 @@ Java 9 里面API 称之为 Flow（流）
 
 ​	Iterator 是拉模式（Pull）
 
-### 项目如何启动
+### 2.项目如何启动
 
 ​	1. mvn install 之后，会生成`springboot-start-0.0.1-SNAPSHOT.jar`、`springboot-start-0.0.1-SNAPSHOT.jar.original`包
 
@@ -211,7 +211,7 @@ springboot-start-0.0.1-SNAPSHOT.jar.original -->默认的maven-jar-plugin生成�
 
 
 
-###  启动流程
+###  3.启动流程
 
 - 判断是否存在web环境  Note: `SpringBoot 2` 与 `SpringBoot 1.X` 不同 
 
@@ -302,7 +302,7 @@ springboot-start-0.0.1-SNAPSHOT.jar.original -->默认的maven-jar-plugin生成�
 
     通过`Thread.currentThread().getContextClassLoader().loadClass(this.mainClassName);` 获取主类，再通过反射启动该类。
 
-## 总结
+## 三、总结
 
 ​	本文简单介绍了SpringBoot如何启动，详细启动，可结合Spring启动做比较。 
 

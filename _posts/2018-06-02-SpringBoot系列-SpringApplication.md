@@ -9,13 +9,13 @@ tags: SpringBoot SpringApplication
 * content
 {:toc}
 
-## SpringApplication
+## 一、SpringApplication
 
   介绍SpringApplication启动,用Spring实现类似的功能。
 
 
 
-### 自定义 SpringApplication  (Spring)
+### 1.自定义 SpringApplication  (Spring)
 
 ​	介绍 `SpringApplication ` `SpringApplicationBuilder `API 调整
 
@@ -80,7 +80,7 @@ public @interface ComponentScans {
 
 添加`spring-boot-starter-web`就添加了`Tomcat`和`SpringMVC`的依赖，类似于子项目自动添加父项目的依赖。
 
-#### [`@Component` 的“派生性”](https://github.com/spring-projects/spring-framework/wiki/Spring-Annotation-Programming-Model)
+#### 1.1[`@Component` 的“派生性”](https://github.com/spring-projects/spring-framework/wiki/Spring-Annotation-Programming-Model)
 
 > `@Component` is a generic stereotype for any Spring-managed component. Any component annotated with `@Component` is a candidate for component scanning. Similarly, any component annotated with an annotation that is itself meta-annotated with `@Component` is also a candidate for component scanning. For example, `@Service` is meta-annotated with `@Component`.
 
@@ -147,7 +147,7 @@ new SpringApplicationBuilder(MicroservicesProjectApplication.class) // Fluent AP
     .run(args);
 ```
 
-#### Spring Boot 引导示例
+#### 1.2. Spring Boot 引导示例
 
 - SpringBoot 与Spring 关联性  (如：获取应用上下文 `Context`等)
 
@@ -176,7 +176,7 @@ public class MicroservicesProjectApplication {
 ```
 
 
-### 配置Spring Boot源
+### 2.配置Spring Boot源
 
 ​	理解Spring Boot 配置  --> 类比Spring配置
 
@@ -192,7 +192,7 @@ profile  = dev 、test
 2. application.properties
 
 
-### SpringAppliation 类型推断（SpringBoot 2.X)
+### 3.SpringAppliation 类型推断（SpringBoot 2.X)
 
 ​	判断Web 应用类型（`REACTIVE`、`NONE`、`SERVLET`）   源码阅读：
 
@@ -215,10 +215,12 @@ private WebApplicationType deduceWebApplicationType() {
 }
 ```
 
-### Spring Boot 事件
+### 4.Spring Boot 事件
 
 ​	介绍 Spring Boot 事件与 Spring Framework 事件之间的差异和联系
 
 
 
-参考：[小马哥](https://github.com/mercyblitz)
+### 参考
+
+[小马哥](https://github.com/mercyblitz)

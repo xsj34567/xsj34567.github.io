@@ -16,11 +16,11 @@ creattime: 2019-05-16 10:29:54
 
 杀毒软件、登录、注销、软件 软件更新等等
 
-### 基本防护
+### 一、基本防护
 
 更新软件、系统参数配置
 
-#### 更新系统软件
+#### 1.更新系统软件
 
 (1)内核修复
 ```shell
@@ -84,7 +84,7 @@ yum update openssh-server
 ```yum update sudo```
 
 
-#### 系统参数设置
+#### 2.系统参数设置
 
 (1)确保SSH MaxAuthTries设置为3到6之间 | 服务配置
 ```
@@ -123,15 +123,15 @@ ClientAliveCountMax 2
 编辑 /etc/ssh/sshd_config 文件以按如下方式设置参数(取消注释): LogLevel INFO
 ```
 
-#### [系统操作监控配置](https://www.landui.com/help/show-2714.html)
+#### 3.[系统操作监控配置](https://www.landui.com/help/show-2714.html)
 
 ```
   *** 可在 /tmp/dbasky/root 目录下查看 IP+时间段 操作记录 
 ```
 
-#### [clamav完整查杀linux病毒实战](https://www.cnblogs.com/k98091518/p/6895078.html)
+#### 4.[clamav完整查杀linux病毒实战](https://www.cnblogs.com/k98091518/p/6895078.html)
 
-#### [阿里云mail发送邮件](https://blog.csdn.net/cbuy888/article/details/88287883) 163、126、QQ邮箱类似
+#### 5.[阿里云mail发送邮件](https://blog.csdn.net/cbuy888/article/details/88287883) 163、126、QQ邮箱类似
 
 ```
   可以将clamav查询的结果（其他任务的结果），发送到邮箱

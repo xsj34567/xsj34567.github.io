@@ -9,7 +9,7 @@ tags: Spring SpringMVC
 * content
 {:toc}
 
-## SpringMVC工作机制
+## 一、SpringMVC工作机制
    主要介绍SpringMVC核心机制，请页面请求，到服务端经历哪些主要过程然后返回信息。
 
 
@@ -27,7 +27,7 @@ tags: Spring SpringMVC
 
 
 
-## SpringMVC 流程分析
+## 二、SpringMVC 流程分析
 
 ​     根据工作机制中三部分来分析 SpringMVC 的源代码。  
 

@@ -14,9 +14,9 @@ tags: Docker Kafak 容器 实战
    基于Docker，安装kafka。
 
 
-### 示例步骤
+### 一、安装步骤
 
-拉去镜像
+### 1.拉去镜像
 
 ```
 
@@ -26,6 +26,7 @@ docker pull wurstmeister/kafka
 
 ```
 
+### 2.编排
 
 docker-compose.yml   windows  注意修改相应的IP、主题
 
@@ -47,6 +48,8 @@ services:
       KAFKA_CREATE_TOPICS: "test:1:1"
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
 ```
+
+### 3.启动服务
 
 
 ```
@@ -80,9 +83,9 @@ docker run -itd --name=kafka-manager -p 9000:9000 -e ZK_HOSTS="127.0.0.1:2181" s
 
 ```
 
-### 问题
+### 二、疑难
 
-#### 问题1
+#### 1.问题
 
 注： 安装docker-compose (注意版本号：github)
 
@@ -93,7 +96,7 @@ chmod +x /usr/local/bin/docker-compose
 
 ```
 
-#### 问题2
+#### 2.问题
 
 ```
 Kafka-manager出现错误，Yikes! Ask timed out on [ActorSelection[Anchor(akka://kafka-manager-system/)
@@ -105,7 +108,7 @@ docker run -itd --name=kafka-manager -p 9000:9000 -e ZK_HOSTS="127.0.0.1:2181" s
 
 ```
 
-参考文档：
+### 参考文档
 
 [Docker 安装](https://www.cnblogs.com/zhaoxxnbsp/p/13065722.html)
 

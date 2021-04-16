@@ -14,9 +14,9 @@ tags: Docker Jenkins 容器 实战
    基于Docker，安装Jenkins。
 
 
-### 示例步骤
+### 一、示例步骤
 
-拉去镜像
+#### 1.拉去镜像
 
 ```
 
@@ -24,7 +24,7 @@ docker pull jenkins/jenkins
 
 ```
 
-#### 环境变量配置
+#### 2.环境变量配置
 
 ```
 #本文的挂载目录是home下
@@ -32,7 +32,7 @@ mkdir -p /usr/meizhangzheng/jenkins
 
 ```
 
-#### 启动命令
+#### 3.启动命令
 
 ```
 #运用镜像启动容器命令
@@ -41,7 +41,7 @@ docker run -d -p 8080:8080 -v /usr/meizhangzheng/jenkins:/var/jenkins_home --nam
 
 ```
 
-#### 完善镜像资源路径
+#### 4.完善镜像资源路径
 
 ```
 
@@ -58,7 +58,7 @@ sed -i  's/http:\/\/www.google.com/http:\/\/www.baidu.com/g' /usr/meizhangzheng/
 ```
 
 
-#### 插件
+#### 5.插件
 
 ```
 
@@ -70,7 +70,7 @@ sed -i  's/http:\/\/www.google.com/http:\/\/www.baidu.com/g' /usr/meizhangzheng/
 
 ```
 
-### 参考
+### 参考文档
 
 [github-jenkins自动构建](https://www.cnblogs.com/weschen/p/6867885.html)
 
