@@ -18,7 +18,7 @@ tags: Docker Jenkins 容器 实战
 
 #### 1.拉去镜像
 
-```
+```sh
 
 docker pull jenkins/jenkins
 
@@ -26,7 +26,7 @@ docker pull jenkins/jenkins
 
 #### 2.环境变量配置
 
-```
+```sh
 #本文的挂载目录是home下
 mkdir -p /usr/meizhangzheng/jenkins
 
@@ -34,7 +34,7 @@ mkdir -p /usr/meizhangzheng/jenkins
 
 #### 3.启动命令
 
-```
+```sh
 #运用镜像启动容器命令
 
 docker run -d -p 8080:8080 -v /usr/meizhangzheng/jenkins:/var/jenkins_home --name jenkins --restart always --privileged=true  -u root jenkins/jenkins
@@ -43,7 +43,7 @@ docker run -d -p 8080:8080 -v /usr/meizhangzheng/jenkins:/var/jenkins_home --nam
 
 #### 4.完善镜像资源路径
 
-```
+```sh
 
 # 修改hudson.model.UpdateCenter.xml 配置信息
 sed -i  's/https:\/\/updates.jenkins.io\/update-center.json/https:\/\/mirrors.tuna.tsinghua.edu.cn\/jenkins\/updates\/update-center.json/g' /usr/meizhangzheng/jenkins/hudson.model.UpdateCenter.xml
@@ -60,7 +60,7 @@ sed -i  's/http:\/\/www.google.com/http:\/\/www.baidu.com/g' /usr/meizhangzheng/
 
 #### 5.插件
 
-```
+```sh
 
 # 选择插件 安装 SSH 、Git、Maven ...
 
