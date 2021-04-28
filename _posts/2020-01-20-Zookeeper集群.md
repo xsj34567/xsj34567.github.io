@@ -4,7 +4,7 @@ title: "Zookeeper集群"
 date: 2021-04-23
 categories: 大数据 Zookeeper
 tags: 大数据 Zookeeper
-updateTime:2020-04-29
+updateTime: 2020-04-29
 ---
 
 * content

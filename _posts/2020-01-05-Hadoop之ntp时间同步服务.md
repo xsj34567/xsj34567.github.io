@@ -4,7 +4,7 @@ title: "Hadoop之ntp时间同步服务"
 date: 2020-01-05
 categories: 大数据 Hadoop NTP
 tags: 大数据
-updateTime:2021-04-19
+updateTime: 2021-04-19
 ---
 
 * content
