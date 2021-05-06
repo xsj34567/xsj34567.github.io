@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SparkDataFrameSQL实战"
+title: "Spark DataFrame实战"
 date: 2021-04-30
 categories: 大数据 Spark DataFrame
 tags: 大数据 Spark DataFrame
