@@ -13,6 +13,8 @@ tags: Docker Jenkins 容器 实战
 
    基于Docker，安装Jenkins。
 
+   建议直接安装（非Docker)
+
 
 ### 一、示例步骤
 
@@ -20,7 +22,7 @@ tags: Docker Jenkins 容器 实战
 
 ```sh
 
-docker pull jenkins/jenkins
+docker pull jenkins/jenkins:lts
 
 ```
 
@@ -37,7 +39,7 @@ mkdir -p /usr/meizhangzheng/jenkins
 ```sh
 #运用镜像启动容器命令
 
-docker run -d -p 8080:8080 -v /usr/meizhangzheng/jenkins:/var/jenkins_home --name jenkins --restart always --privileged=true  -u root jenkins/jenkins
+docker run -d -p 8080:8080 -p 50000:50000 -v /usr/meizhangzheng/jenkins:/var/jenkins_home --name jenkins --restart always --privileged=true  -u root jenkins/jenkins:lts
 
 ```
 
@@ -57,6 +59,20 @@ sed -i  's/http:\/\/www.google.com/http:\/\/www.baidu.com/g' /usr/meizhangzheng/
 
 ```
 
+- 手动修改密码
+
+  ```sh
+  #项目路径
+  /usr/meizhangzheng/jenkins/users/
+  
+  # 外层路径
+  /var/jenkins_home/users/  
+  
+  #密码修改为：123456
+  <passwordHash>#jbcrypt:$2a$10$LxMm9HqAI/R4z7gL57qTouW/Mrz8uSaBpCGKvKc7K6dK.g/0yk/uq</passwordHash>
+  ```
+
+  
 
 #### 5.插件
 
@@ -79,3 +95,5 @@ sed -i  's/http:\/\/www.google.com/http:\/\/www.baidu.com/g' /usr/meizhangzheng/
 [jenkins/jenkins](https://www.cnblogs.com/dreammer/p/13670222.html)
 
 [docker-jenkins](https://www.cnblogs.com/nhdlb/p/12576273.html)
+
+[手动修改密码](https://blog.csdn.net/weixin_39773337/article/details/109035933)
