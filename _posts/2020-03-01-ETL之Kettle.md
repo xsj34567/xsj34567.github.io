@@ -28,9 +28,7 @@ Extract-Transform-Load: 抽取->转换->加载
 
 ### [1. Kettle项目示例](http://www.kettle.net.cn/blog/category/demo/)
 
-[项目demo](https://gitee.com/xushj/etl-demo)
-
-
+>  [项目demo](https://gitee.com/xushj/etl-demo)
 
 ### 2. 常见问题
 
