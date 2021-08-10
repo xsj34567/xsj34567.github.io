@@ -36,3 +36,9 @@ tags: Spring SpringMVC
  其二,根据请求 url 找到对应的 Controller,并从 Controller 中找到处理请求的方法;
 
  其三,request 参数绑定到方法的形参,执行方法处理请求,并返回结果视图 。
+
+## 三、[SpringBoot使用过滤器、拦截器、切面(AOP)，及其之间的区别和执行顺序](https://www.cnblogs.com/java-spring/p/12742984.html)
+
+> 范围：Filter > Servlet > Interceptor > Aspect > Controller  
+>
+> 顺序：Filter ——> Servlet ——> Interceptor ——> Aspect（环绕前、前置、环绕后、后置） ——> Controller  ——> Aspect ——> Interceptor ——> Servelet ——> Filter  (前置、后置)
