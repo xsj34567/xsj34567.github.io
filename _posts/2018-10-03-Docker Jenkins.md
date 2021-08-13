@@ -18,7 +18,7 @@ tags: Docker Jenkins 容器 实战
 
 ### 一、示例步骤
 
-#### 1.拉去镜像(lts:发行稳定版本)
+#### 1. 拉去镜像(lts:发行稳定版本)
 
 ```sh
 
@@ -26,7 +26,7 @@ docker pull jenkins/jenkins:lts
 
 ```
 
-#### 2.环境变量配置
+#### 2. 环境变量配置
 
 ```sh
 #本文的挂载目录是home下
@@ -34,7 +34,7 @@ mkdir -p /usr/meizhangzheng/jenkins
 
 ```
 
-#### 3.启动命令
+#### 3. 启动命令
 
 ```sh
 #运用镜像启动容器命令
@@ -43,7 +43,7 @@ docker run -d -p 8080:8080 -p 50000:50000 -v /usr/meizhangzheng/jenkins:/var/jen
 
 ```
 
-#### 4.完善镜像资源路径
+#### 4. 完善镜像资源路径
 
 ```sh
 
@@ -74,7 +74,7 @@ sed -i  's/http:\/\/www.google.com/http:\/\/www.baidu.com/g' /usr/meizhangzheng/
 
   
 
-#### 5.插件
+#### 5. 插件
 
 ```sh
 
@@ -85,6 +85,14 @@ sed -i  's/http:\/\/www.google.com/http:\/\/www.baidu.com/g' /usr/meizhangzheng/
 # 选择自由项目
 
 ```
+
+#### 6. 事例分析
+
+背景：构建前端项目失败;
+
+![2021-08-09_jenkins](\image\测试\jenkins\2021-08-09_jenkins.png)
+
+分析：联系上下文分析，具体分析走到哪一步，是否项目代码或业务问题；据分析代码拉去没问题，是引用插件问题。
 
 ### 参考文档
 

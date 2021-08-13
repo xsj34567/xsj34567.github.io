@@ -66,7 +66,7 @@ Extract-Transform-Load: 抽取->转换->加载
 
 > 调度：阻塞数据等待数据完成
 
-
+![2021-08-05_etl](\image\etl\kettle\2021-08-05_etl.png)
 
 
 
@@ -86,3 +86,4 @@ Extract-Transform-Load: 抽取->转换->加载
 
 链接：https://pan.baidu.com/s/1DAOzqGHJId1KWR1Eb58RFQ 
 提取码：95md 
+
