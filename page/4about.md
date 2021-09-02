@@ -66,6 +66,8 @@ type: page
 [微服务-程序猿DD](http://blog.didispace.com/)
 [MrBird](https://mrbird.cc/)
 
+[廖雪峰博客](https://www.liaoxuefeng.com/)
+
 `软件：`
 [我爱分享](http://www.zhanshaoyi.com/rjxz.html)
 
