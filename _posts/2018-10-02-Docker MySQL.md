@@ -358,6 +358,10 @@ FLUSH PRIVILEGES;
 
 ```
 
+```sql
+select '自己有才是真的有';
+```
+
 ### 参考文档
 
 [Docker 部署 Mysql8.0](https://blog.csdn.net/xsj34567/article/details/80940238#comments_13664456)
