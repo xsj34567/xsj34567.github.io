@@ -20,7 +20,7 @@ updateTime: 2021-04-09
 
 	基本操作：标题、段落....
 
-#### 1.表格
+#### 1. 表格
 
 	用途：便于比较各个组件差异、更明了...
 
@@ -51,7 +51,7 @@ updateTime: 2021-04-09
 | 单元格 | 单元格 | 单元格 |
 | 单元格 | 单元格 | 单元格 |
 
-#### 2.插入图片
+#### 2. 插入图片
 
 ```markdown
 ​```
@@ -63,11 +63,29 @@ updateTime: 2021-04-09
 
 
 
+#### 3.  加粗、设置颜色
+
+##### 3.1 **加粗**
+
+```markdown
+** 加粗 **
+```
+
+##### 3.2 <font color='red'>设置颜色</font>
+
+```markdown
+<font color='red'>设置颜色</font>
+```
+
+
+
 ### 参考文档
 
 [菜鸟教程Markdown](https://www.runoob.com/markdown/md-tutorial.html)
 
 [Markdown高级技巧](https://www.runoob.com/markdown/md-advance.html)
+
+[Markdown 中设置文本字体为红色（改变字体颜色）的方法](https://blog.csdn.net/COCO56/article/details/105155328/)
 
 ```haskell
 成功=思维方式×热情×能力。
