@@ -41,6 +41,9 @@ mkdir -p /usr/meizhangzheng/jenkins
 
 docker run -d -p 8080:8080 -p 50000:50000 -v /usr/meizhangzheng/jenkins:/var/jenkins_home --name jenkins --restart always --privileged=true  -u root jenkins/jenkins:lts
 
+# 进入容器，查看密码
+docker exec -it jenkins /bin/bash
+cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
 #### 4. 完善镜像资源路径
