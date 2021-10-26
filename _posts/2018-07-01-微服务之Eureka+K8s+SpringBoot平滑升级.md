@@ -108,6 +108,9 @@ public class ServiceShutdownController {
     private ApplicationContext applicationContext;
 
     private final static String DOWN_STATUS = "DOWN";
+    private final static String UP_STATUS = "UP";
+    private final static String OUT_OF_SERVICE_STATUS = "OUT_OF_SERVICE";
+    
     @Resource
     private ServiceRegistryEndpoint registryEndpoint;
 
@@ -116,7 +119,26 @@ public class ServiceShutdownController {
 
     @Resource
     private XxlJobExecutor xxlJobExecutor;
+    private String eurekaStatus = "";
 
+    /**
+     * 手动设置服务状态
+     */
+    @GetMapping("/service/start")
+    public void instanceStart() {
+        log.info("=========================== 探针检查中 ===========================：{}", eurekaStatus);
+        if (StringUtils.isEmpty(eurekaStatus)) {
+            ResponseEntity status = registryEndpoint.getStatus();
+            log.info("=========================== 探针检查中 ===========================：{}", status);
+            if (status != null && status.toString().contains(OUT_OF_SERVICE_STATUS)) {
+                log.info("=========================== 手动设置服务状态 ===========================");
+                registryEndpoint.setStatus(UP_STATUS);
+                eurekaStatus = UP_STATUS;
+                log.info("=========================== 手动设置服务状态 ===========================");
+            }
+        }
+    }
+    
     /**
     * 完成服务实例下线的相关操作
     * <p>该接口下完成所有组件及注册下线 </p>
@@ -143,6 +165,49 @@ public class ServiceShutdownController {
         AvailabilityChangeEvent.publish(this.applicationContext, ReadinessState.REFUSING_TRAFFIC);
     }
 }
+```
+
+
+
+### 4. k8s设置
+
+```yaml
+readinessProbe:
+httpGet:
+path: /actuator/health/readiness   #–> (如果actuator 非2.3以上版本请自行编写监听接口 ！要求：【在执行 preStop 之后返回状态码非 200 其他情况必须200】 此步为剔除掉k8s调用的pod而准备,断掉当前pod 实例的k8s流量调用)
+port: 9000                                          # →    端口是服务的启动端口，别乱写
+scheme: HTTP
+initialDelaySeconds: 3                # →    如果项目的启动加载过长 可以适当延长 延迟探测  例如 启动需要30s  可以调整为35 -40s 都可以。
+timeoutSeconds: 1
+periodSeconds: 3   
+successThreshold: 1
+failureThreshold: 3
+lifecycle:
+preStop:
+exec:
+command:
+- /bin/bash
+- '-c'
+- >-
+curl -X GET http://127.0.0.1:9000/service/shutdown && sleep
+60 && exit 0         
+
+#– >  (接口可自定义 ，sleep 时间为  eureka 缓存剔除刷新时间 +适当延迟15来秒  [ eureka.client.registry-fetch-interval-seconds （默认30s） + ribbon.ServerListRefreshInterval （默认30s）   : 请自行查看各自项目配置  ] 
+
+#例如：    eureka.client.registry-fetch-interval-seconds = 5
+
+ribbon.ServerListRefreshInterval  = 30 
+
+#sleep 可设置为45-60s 以保证绝对正常
+
+#如果项目中未使用到eureka 那么 sleep 时间  可配置为 : 5-10 s – >  为k8s   readinessProbe 剔除 pod流量而适当延迟的时间
+
+
+
+#配置：
+
+#terminationGracePeriodSeconds: 90       – >  (最大容忍删除pod 时间 设置为 ：preStop 的sleep  +  tomcat延迟关闭时间【graceful 时间 2.3以上默认30s 】  )
+
 ```
 
 
