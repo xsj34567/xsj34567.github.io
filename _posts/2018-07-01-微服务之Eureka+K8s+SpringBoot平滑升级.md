@@ -12,18 +12,19 @@ updateTime: 2021-10-22
 
 ## 一、微服务之 [Eureka](https://baike.baidu.com/item/Eureka/22402835?fr=aladdin) 平滑升级
 
-了解基本概念：分布式、集群、微服务...
+​	    现在各个项目基本是与容器化部署，为了减少或避免各个服务启动时对外部服务的影响，所以服务平滑升级必不可少；主要基于三个动作：注册、续约、取消，下面基于k8s + eureka + springcloud + springboot  为例分析：
 
-分布式：把一个应用拆成几个应用部署到不同的机器上
+![2021-10-26_K8s+Eureka平滑升级逻辑图](\image\微服务\注册中心\Eureka\2021-10-26_K8s+Eureka平滑升级逻辑图.png)
 
-集群：同一个应用部署到不同的机器上
+<font color='red'>一句话总结：当新服务启动成功后，旧服务下线然后停止服务，流量转移到新服务。</font >
 
-微服务：比分布式拆分应用的颗粒度更细，拆分为单个的服务，比如用户服务、短信服务...
+[平滑升级图解](https://blog.csdn.net/zk18286047195/article/details/106054003)
 
 ### 1. SpringCloud+Eureka +K8s + SpringBoot 平滑升级原理分析
 
+#### 1.1 Eureka-Server参数配置
+
 ```yaml
-#Eureka-server参数配置
 eureka:
   environment: ${spring.profiles.active}
   datacenter: "mzz"
@@ -58,6 +59,7 @@ eureka:
     eviction-interval-timer-in-ms: 1500
   dashboard:
     enabled: true
+# 是否需要安全配置（如果需要，则注册时也需要验证）
 management:
   security:
     enabled: false
@@ -75,6 +77,30 @@ eureka.instance.lease-renewal-interval-in-seconds=1
 #用于定义服务失效的时间，默认90秒
 eureka.instance.lease-expiration-duration-in-seconds=1
 
+```
+
+#### 1.2 Eureka-Client参数配置
+
+```yaml
+eureka:
+  client:
+    enabled: true
+    # 询问Eureka服务url信息变化的时间间隔（s），默认为300秒
+    eurekaServiceUrlPollIntervalSeconds: 10
+    healthcheck:
+      enabled: true
+    # Eureka服务间复制instanceInfo时间间隔
+    instance-info-replication-interval-seconds: 20
+    register-with-eureka: true
+    # 从Eureka服务器注册表中获取注册信息的时间间隔（s），默认为30秒
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 1
+    prefer-ip-address: true
 ```
 
 
@@ -171,10 +197,16 @@ public class ServiceShutdownController {
 
 ### 4. k8s设置
 
+主要依赖两个 [readinessProbe 探针：服务是否就绪](https://blog.csdn.net/qq_32641153/article/details/100614499)、[Lifecycle定义preStop钩子：下线旧服务](https://blog.csdn.net/u012124304/article/details/107497510)
+
+![2021-10-27_K8s_Pod生命周期.png](\image\k8s\2021-10-27_K8s_Pod生命周期.png)
+
+<font color='red'>Pod LifeCycle</font>
+
 ```yaml
 readinessProbe:
 httpGet:
-path: /actuator/health/readiness   #–> (如果actuator 非2.3以上版本请自行编写监听接口 ！要求：【在执行 preStop 之后返回状态码非 200 其他情况必须200】 此步为剔除掉k8s调用的pod而准备,断掉当前pod 实例的k8s流量调用)
+path: /actuator/health/readiness   #–> (如果actuator 非2.3以上版本请自行编写监听接口 ！要求：【在执行 preStop 之后返回状态码非 200 其他情况必须200】 此步为剔除掉k8s调用的pod而准备,断掉当前pod 实例的k8s流量调用)  /service/start (自定义)
 port: 9000                                          # →    端口是服务的启动端口，别乱写
 scheme: HTTP
 initialDelaySeconds: 3                # →    如果项目的启动加载过长 可以适当延长 延迟探测  例如 启动需要30s  可以调整为35 -40s 都可以。
@@ -203,7 +235,6 @@ ribbon.ServerListRefreshInterval  = 30
 #如果项目中未使用到eureka 那么 sleep 时间  可配置为 : 5-10 s – >  为k8s   readinessProbe 剔除 pod流量而适当延迟的时间
 
 
-
 #配置：
 
 #terminationGracePeriodSeconds: 90       – >  (最大容忍删除pod 时间 设置为 ：preStop 的sleep  +  tomcat延迟关闭时间【graceful 时间 2.3以上默认30s 】  )
@@ -214,21 +245,13 @@ ribbon.ServerListRefreshInterval  = 30
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 #### 参考文档
 
 [Eureka参数配置](https://www.cnblogs.com/fangfuhai/p/7070325.html)
+
+[k8s pod 生命周期图解](https://blog.51cto.com/u_433266/2536838)
+
+[Kubernetes Pod的生命周期(Lifecycle)](https://blog.csdn.net/u012124304/article/details/107497510)
 
 [Eureka工作原理](https://www.cnblogs.com/jianfeijiang/p/11944344.html)
 
