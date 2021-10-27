@@ -12,7 +12,11 @@ updateTime: 2021-10-22
 
 ## 一、微服务之 [Eureka](https://baike.baidu.com/item/Eureka/22402835?fr=aladdin) 平滑升级
 
-​	    现在各个项目基本是与容器化部署，为了减少或避免各个服务启动时对外部服务的影响，所以服务平滑升级必不可少；主要基于三个动作：注册、续约、取消，下面基于k8s + eureka + springcloud + springboot  为例分析：
+​	    现在各个项目基本是与容器化部署，为了减少或避免各个服务启动时对外部服务的影响，所以服务平滑升级必不可少；
+
+> SpringCloud+Eureka +K8s + SpringBoot 平滑升级原理分析
+
+主要基于三个动作：注册、续约、取消，下面基于k8s + eureka + springcloud + springboot  为例分析：
 
 ![2021-10-26_K8s+Eureka平滑升级逻辑图](\image\微服务\注册中心\Eureka\2021-10-26_K8s+Eureka平滑升级逻辑图.png)
 
@@ -20,7 +24,7 @@ updateTime: 2021-10-22
 
 [平滑升级图解](https://blog.csdn.net/zk18286047195/article/details/106054003)
 
-### 1. SpringCloud+Eureka +K8s + SpringBoot 平滑升级原理分析
+### 1. 平滑升级示例
 
 #### 1.1 Eureka-Server参数配置
 
@@ -48,7 +52,7 @@ eureka:
     eurekaServiceUrlPollIntervalSeconds: 10
   instance:
   
-  	# Eureka客户需要多长时间发送心跳给eureka服务器，表明它仍然活着,默认为30 秒
+	# Eureka客户需要多长时间发送心跳给eureka服务器，表明它仍然活着,默认为30 秒
     lease-renewal-interval-in-seconds: 5
     
     # Eureka服务器在接收到实例的最后一次发出的心跳后，需要等待多久才可以将此实例删除，默认为90秒
@@ -107,7 +111,7 @@ eureka:
 
 ### 2.项目yaml配置
 
-####  2.1 采用springboot2.3+actuator 2.3以上的项目
+> 采用springboot2.3+actuator 2.3以上的项目
 
 ****
 
@@ -204,29 +208,33 @@ public class ServiceShutdownController {
 <font color='red'>Pod LifeCycle</font>
 
 ```yaml
-readinessProbe:
-httpGet:
-path: /actuator/health/readiness   #–> (如果actuator 非2.3以上版本请自行编写监听接口 ！要求：【在执行 preStop 之后返回状态码非 200 其他情况必须200】 此步为剔除掉k8s调用的pod而准备,断掉当前pod 实例的k8s流量调用)  /service/start (自定义)
-port: 9000                                          # →    端口是服务的启动端口，别乱写
-scheme: HTTP
-initialDelaySeconds: 3                # →    如果项目的启动加载过长 可以适当延长 延迟探测  例如 启动需要30s  可以调整为35 -40s 都可以。
-timeoutSeconds: 1
-periodSeconds: 3   
-successThreshold: 1
-failureThreshold: 3
-lifecycle:
-preStop:
-exec:
-command:
-- /bin/bash
-- '-c'
-- >-
-curl -X GET http://127.0.0.1:9000/service/shutdown && sleep
-60 && exit 0         
+      readinessProbe:
+        httpGet:
+          # (如果actuator 非2.3以上版本请自行编写监听接口 ！要求：【在执行 preStop 之后返回状态码非 200 其他情况必须200】 此步为剔除掉k8s调用的pod而准备,断掉当前pod 实例的k8s流量调用)  /service/start (自定义)
+          path: /actuator/health/readiness
+          # 端口是服务的启动端口，别乱写
+          port: 9000
+          scheme: HTTP
+        # 如果项目的启动加载过长 可以适当延长 延迟探测  例如 启动需要30s  可以调整为35 -40s 都可以。
+        initialDelaySeconds: 3
+        timeoutSeconds: 1
+        periodSeconds: 3
+        successThreshold: 1
+        failureThreshold: 3
+      lifecycle:
+        preStop:
+          exec:
+            command:
+              - /bin/bash
+              - '-c'
+              - >-
+                curl -X GET http://127.0.0.1:9000/service/shutdown && sleep 60
+                && exit 0 
+  terminationGracePeriodSeconds: 60
+  
+# (接口可自定义 ，sleep 时间为  eureka 缓存剔除刷新时间 +适当延迟15来秒  [ eureka.client.registry-fetch-interval-seconds （默认30s） + ribbon.ServerListRefreshInterval （默认30s）   : 请自行查看各自项目配置  ] 
 
-#– >  (接口可自定义 ，sleep 时间为  eureka 缓存剔除刷新时间 +适当延迟15来秒  [ eureka.client.registry-fetch-interval-seconds （默认30s） + ribbon.ServerListRefreshInterval （默认30s）   : 请自行查看各自项目配置  ] 
-
-#例如：    eureka.client.registry-fetch-interval-seconds = 5
+#例如：eureka.client.registry-fetch-interval-seconds = 5
 
 ribbon.ServerListRefreshInterval  = 30 
 
@@ -236,9 +244,16 @@ ribbon.ServerListRefreshInterval  = 30
 
 
 #配置：
+#terminationGracePeriodSeconds: 90   – >  (最大容忍删除pod 时间 设置为 ：preStop 的sleep  +  tomcat延迟关闭时间【graceful 时间 2.3以上默认30s 】  )
 
-#terminationGracePeriodSeconds: 90       – >  (最大容忍删除pod 时间 设置为 ：preStop 的sleep  +  tomcat延迟关闭时间【graceful 时间 2.3以上默认30s 】  )
+```
 
+
+
+### 5.手动剔除Eureka服务
+
+```javascript
+POST http://hp.eureka.xxxx/eureka/apps/MD-BASIC-DATA-SERVICE/md-basic-data-service:10.28.5.216:9000/status?value=UP
 ```
 
 
