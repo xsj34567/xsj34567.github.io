@@ -3,3 +3,7 @@
 [1106/034341.626:INFO:crash_reporting.cc(219)] Crash reporting enabled for process: gpu-process
 [1106/034342.056:INFO:crash_reporting.cc(219)] Crash reporting enabled for process: utility
 [1106/034541.696:INFO:crash_reporting.cc(219)] Crash reporting enabled for process: gpu-process
+[1106/090456.050:WARNING:angle_platform_impl.cc(45)] compileToBinary(256): 
+C:\fakepath(75,10-46): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(98,10-46): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+
