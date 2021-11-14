@@ -2,7 +2,7 @@
 layout: post
 title:  "Docker MySQL"
 date:   2018-10-02 
-categories: Docker MySQL容器 实战
+categories: Docker MySQL 实战
 tags: Docker MySQL 容器 实战
 ---
 
