@@ -31,6 +31,34 @@ updateTime: 2021-11-14
 
 
 
+### 3. 主从配置
+
+#### 3.1 开启binlog
+
+```sql
+[mysqld]
+log-bin=mysql-bin
+server_id=100  -- 注意主从都需配置，并且不同
+```
+
+
+
+#### 3.2 开启同步
+
+```sql
+# 在slave 上启动线程：
+start slave;
+
+# 查看状态 在 slave 上执行命令：
+
+show slave status\G;
+
+```
+
+
+
+集群也是类似的：基于binlog  	<柏美迪康>
+
 参考
 
 https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html)
