@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "高并发之ReentrantLock基础"
+title:  "高并发之ReentrantLock分析"
 date:   2018-08-03
 categories: 高并发 Lock
 tags: 高并发
