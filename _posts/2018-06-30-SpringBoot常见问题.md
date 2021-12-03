@@ -134,6 +134,13 @@ public class AsyncService {
 
 ```
 
+### 4. OOM
+
+#### 4.1 springboot 内存溢出如何重启
+
+- 基于K8s配置，自动重启
+- [spring-boot 程序出现oom自动重启的shell脚本](https://my.oschina.net/miaojiangmin/blog/3219273)
+
 
 
 ### 参考

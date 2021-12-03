@@ -191,13 +191,12 @@ springboot-start-0.0.1-SNAPSHOT.jar.original -->默认的maven-jar-plugin生成�
   Spring-Boot-Lib: BOOT-INF/lib/
   Created-By: Apache Maven 3.5.3
   Build-Jdk: 1.8.0_101
-  Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
-   ot-starter-parent/springboot-start
+  Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot-starter-parent/springboot-start
   ```
-
+  
   - Main-Class: `org.springframework.boot.loader.JarLauncher` 是jar启动的入口
   - Start-Class：`com.mzz.springbootstart.SpringbootStartApplication` 是我们系统启动的入口
-
+  
 - `org.springframework.boot.loader`: 需要加载的.class的目录
 
   - achive： 归档文件
