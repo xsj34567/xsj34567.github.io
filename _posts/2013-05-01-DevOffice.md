@@ -32,6 +32,19 @@ updateTime: 2021-04-09
 ```
 https://www.runoob.com/markdown/md-table.html
 
+
+
+### 二、 浏览器
+
+#### 1. chrome 设置黑色背景
+
+```html
+<!-- 地址栏输入下面url -->
+chrome://flags/#enable-force-dark
+```
+
+
+
 ### 参考文档
 
 [字符串连接](https://jingyan.baidu.com/article/22a299b59185599e19376aac.html)
