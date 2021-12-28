@@ -11,7 +11,7 @@ tags: 大数据 ETL
 
 ## [ETL](https://baike.baidu.com/item/ETL/1251949?fr=aladdin)
 
-[项目demo](https://gitee.com/xushj/etl-demo)
+[项目demo：https://gitee.com/xushj/etl-demo.git](https://gitee.com/xushj/etl-demo)
 
 ### 1. Kettle  JOB 
 
@@ -255,6 +255,8 @@ python ..
 
 #### 参考资料
 
+[项目demo：https://gitee.com/xushj/etl-demo.git](https://gitee.com/xushj/etl-demo)
+
 [kettle源码](https://github.com/pentaho/pentaho-kettle)
 
 [Kettle中文网](http://www.kettle.net.cn/category/demo)
@@ -269,3 +271,4 @@ python ..
 
 链接：https://pan.baidu.com/s/1DAOzqGHJId1KWR1Eb58RFQ 
 提取码：95md 
+
