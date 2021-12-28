@@ -285,3 +285,5 @@ POST http://hp.eureka.xxxx/eureka/apps/MD-BASIC-DATA-SERVICE/md-basic-data-servi
 
 [Eureka原理分析](https://blog.csdn.net/zhuyanlin09/article/details/89598245)
 
+[掌握SpringBoot-2.3的容器探针：实战篇](https://xinchen.blog.csdn.net/article/details/106607225)
+
