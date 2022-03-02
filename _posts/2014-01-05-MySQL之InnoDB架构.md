@@ -15,7 +15,17 @@ updateTime: 2021-11-14
 
 [图片来自官网](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
 
-核心特点：`聚簇索引`、`修改缓冲区(chage buffer)`、`自适应hash索引 AHI`、`MVCC(多版本控制)`、`多缓冲区池(减少磁盘IO)`、`事务（数据安全性）`、`行级锁颗粒(并发控制)`、`外键`、`支持更多复制特性（主从/集群）`、`支持热备`、`自动故障恢复`、`双写机制 double write`
+#### 1.1 核心结构及特点
+
+​	`聚簇索引`、`修改缓冲区(chage buffer)`、`自适应hash索引 AHI`、`MVCC(多版本控制)`、`多缓冲区池(减少磁盘IO)`、`事务（数据安全性）`、`行级锁颗粒(并发控制)`、`外键`、`支持更多复制特性（主从/集群）`、`支持热备`、`自动故障恢复`、`双写机制 double write`
+
+#### 1.2 常用字符集
+
+>  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+>
+> 兼容emoji编码支持
+
+[参考文档](https://blog.csdn.net/qq_37054881/article/details/90023611)
 
 ### 2. 核心模块
 
