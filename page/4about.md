@@ -68,6 +68,8 @@ type: page
 
 [廖雪峰博客](https://www.liaoxuefeng.com/)
 
+[阮一峰的个人网站](https://www.ruanyifeng.com/)
+
 `软件：`
 [我爱分享](http://www.zhanshaoyi.com/rjxz.html)
 
