@@ -126,6 +126,19 @@ server.shutdown = graceful
 
 <font color='red'>备注： graceful 采用了默认30s 如果项目本身觉得时间不够可自行配置时间 spring.lifecycle.timeout-per-shutdown-phase</font>
 
+
+
+【2021-12-22】
+
+如果Eureka注册中心，服务一直OUT_OF_SERVICE 状态，则
+
+```properties
+management.endpoint.health.probes.enabled = false
+# 探针接口 /actuator/health/readiness 改为 /actuator/health
+```
+
+
+
 ### 3.项目示例
 
 ```java
@@ -271,4 +284,6 @@ POST http://hp.eureka.xxxx/eureka/apps/MD-BASIC-DATA-SERVICE/md-basic-data-servi
 [Eureka工作原理](https://www.cnblogs.com/jianfeijiang/p/11944344.html)
 
 [Eureka原理分析](https://blog.csdn.net/zhuyanlin09/article/details/89598245)
+
+[掌握SpringBoot-2.3的容器探针：实战篇](https://xinchen.blog.csdn.net/article/details/106607225)
 

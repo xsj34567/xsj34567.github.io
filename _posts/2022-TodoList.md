@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "TodoList"
-date: 2021-12-31
+date: 2022-02-23
 categories: aTodoList
 tags: aTodoList
-updateTime: 2021-12-31
+updateTime: 2022-02-23
 ---
 
 * content
@@ -45,7 +45,10 @@ updateTime: 2021-12-31
 
 ### 4.消息中间件
 
-​	kafka 进行中
+- kafka 
+- rabbitMQ
+
+
 
 
 
