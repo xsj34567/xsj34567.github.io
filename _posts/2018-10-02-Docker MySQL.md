@@ -32,7 +32,7 @@ docker pull mysql:8.0.11
 ```shell
 mkdir -p /usr/local/mysqlData/test/cnf
 mkdir -p /usr/local/mysqlData/test/data
-vi /usr/loal/mysqlData/test/cnf/my.cnf
+vi /usr/local/mysqlData/test/cnf/my.cnf
 ```
 
 #### 2.2 配置my.cnf
@@ -348,7 +348,7 @@ grant all PRIVILEGES on *.* to root@'%' WITH GRANT OPTION;
 grant all PRIVILEGES on *.* to root@'%' WITH GRANT OPTION;
 
 # 更新密码算法（msyql 8.0 以上）
-ALTER user 'root'@'%' IDENTIFIED BY '123456' PASSWORD EXPIRE NEVER;
+# ALTER user 'root'@'%' IDENTIFIED BY '123456' PASSWORD EXPIRE NEVER;
 ALTER user 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
 
 # 提交
