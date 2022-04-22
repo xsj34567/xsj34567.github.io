@@ -14,7 +14,7 @@ updateTime: 2021-04-09
 
 ## 文档工具
 
-	熟练使用常用文档工具
+> 熟练使用常用文档工具    [示例:  https://www.zybuluo.com/mdeditor](https://www.zybuluo.com/mdeditor)
 
 ### 一、Markdown 操作
 
@@ -60,15 +60,10 @@ updateTime: 2021-04-09
 
 #### 2. 插入图片
 
-````markdown
 ```
-# 格式：相对路径（本地不可访问，线上可访问）
+格式：相对路径（本地不可访问，线上可访问）
 ![2021-04-14_JVM数据运行时](\image\2021-04-14_JVM数据运行时.png)
-​```
-
-````
-
-
+```
 
 #### 3.  加粗、设置颜色
 
@@ -86,7 +81,31 @@ updateTime: 2021-04-09
 
 
 
+#### 4. Todo List
+
+```
+- [ ] 支持以 PDF 格式导出文稿
+- [ ] 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率
+- [x] 新增 Todo 列表功能
+- [x] 修复 LaTex 公式渲染问题
+- [x] 新增 LaTex 公式编号功能
+```
+
+显示效果：[来源：https://www.zybuluo.com/mdeditor](https://www.zybuluo.com/mdeditor)
+
+- [ ] 支持以 PDF 格式导出文稿
+- [ ] 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率
+- [x] 新增 Todo 列表功能
+- [x] 修复 LaTex 公式渲染问题
+- [x] 新增 LaTex 公式编号功能
+
+
+
+
+
 ### 参考文档
+
+[高效图表](https://www.zybuluo.com/mdeditor)
 
 [菜鸟教程Markdown](https://www.runoob.com/markdown/md-tutorial.html)
 
