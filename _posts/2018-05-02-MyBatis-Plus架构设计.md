@@ -36,6 +36,43 @@ mybatis-plus 是基于mybatis增强版。
 > 可使用视图，同查询表操作类似。
 
 
+### 2.3 包装类查询
+
+```java
+//mybatis-plus-core:3.4.2 版本
+
+LambdaQueryWrapper<OmPostOrganization> wrapper = new LambdaQueryWrapper<>();
+wrapper.select(OmPostOrganization::getOrganizationId);
+wrapper.select(OmPostOrganization::getPostId);
+//只能查询出postId，不能查询organization
+
+
+LambdaQueryWrapper<OmPostOrganization> wrapper = new LambdaQueryWrapper<>();
+        wrapper.select(OmPostOrganization::getOrganizationId, OmPostOrganization::getPostId);
+
+// postId、organizationId都能够被查询
+```
+
+
+### 2.4 动态SQL（配置SQL）
+
+```java
+public interface SkCommonMsgMapper extends MPJBaseMapper<SkCommonMsg> {
+
+    @Select("${sql}")
+    @ResultType(ArrayList.class)
+    List<CommonMsgBO> excuteQuery(@Param("sql") String sql);
+}
+
+```
+
+[MP动态SQL查询-参考](https://www.cnblogs.com/zimug/archive/2020/07/10/13277392.html)
+
+[Gitee](https://gitee.com/baomidou/mybatis-plus)
+
+### 参考
+
+[mybatis-plus](https://www.oschina.net/p/mybatis-plus?hmsr=aladdin1e1)
 
 [Gitee](https://gitee.com/baomidou/mybatis-plus)
 
