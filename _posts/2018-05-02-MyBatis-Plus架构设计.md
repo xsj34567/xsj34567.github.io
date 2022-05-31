@@ -53,6 +53,16 @@ LambdaQueryWrapper<OmPostOrganization> wrapper = new LambdaQueryWrapper<>();
 // postId、organizationId都能够被查询
 ```
 
+#### 2.3.1 特殊过滤
+
+```java
+
+// 通过字段排序 Order   Asc
+
+
+// 只查询一条数据
+wrapper.last(" limit 1");
+```
 
 ### 2.4 动态SQL（配置SQL）
 
