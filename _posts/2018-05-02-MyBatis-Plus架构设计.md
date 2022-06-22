@@ -35,34 +35,65 @@ mybatis-plus 是基于mybatis增强版。
 
 > 可使用视图，同查询表操作类似。
 
+### 2.3 包装类
 
-### 2.3 包装类查询
+#### 2.3.1 查询
 
 ```java
 //mybatis-plus-core:3.4.2 版本
-
 LambdaQueryWrapper<OmPostOrganization> wrapper = new LambdaQueryWrapper<>();
 wrapper.select(OmPostOrganization::getOrganizationId);
-wrapper.select(OmPostOrganization::getPostId);
 //只能查询出postId，不能查询organization
+wrapper.select(OmPostOrganization::getPostId);
 
 
+// postId、organizationId都能够被查询
 LambdaQueryWrapper<OmPostOrganization> wrapper = new LambdaQueryWrapper<>();
         wrapper.select(OmPostOrganization::getOrganizationId, OmPostOrganization::getPostId);
 
-// postId、organizationId都能够被查询
+
+// 非空才添加 2022-06-22
+public List<RoleListRet> listByUser(RoleListReq req) {
+        MPJLambdaWrapper<SysRole> ew = mpjWrapper()
+                .selectAll(SysRole.class)
+                .leftJoin(SysUserRole.class, SysUserRole::getRoleId, SysRole::getId)
+                .leftJoin(SysUser.class, SysUser::getId, SysUserRole::getUserId)
+                .leftJoin(SysDept.class, SysDept::getId, SysUser::getDeptId)
+                .eq(Util.notEmpty(req.getUserId()), SysUser::getId, req.getUserId())  // ***
+                .eq(Util.notEmpty(req.getUserName()), SysUser::getUserName, req.getUserName()) // ***
+                .and(t -> handleQueryWrapper(t, req));
+        ew.orderByAsc(SysRole::getRoleSort);
+        return baseMapper.selectJoinList(RoleListRet.class, ew);
+    }
 ```
 
-#### 2.3.1 特殊过滤
+#### 2.3.2 更新
+
+```java
+// LambdaUpdateChainWrapper LambdaUpdateWrapper 2022-06-22
+public boolean updateUserStatus(UserUpdateReq req) {
+        LambdaUpdateChainWrapper<SysUser> uw = userRepo.lambdaUpdate();
+        uw.set(SysUser::getStatus, req.getStatus()).set(SysUser::getUpdateBy, SecurityUtil.getUserId())
+                .set(SysUser::getUpdateTime, LocalDate.now())
+               .eq(SysUser::getId, req.getId());
+		      // .eq(Util.notEmpty(req.getUserId()), SysUser::getId, req.getUserId()) //非空才where过滤
+        return uw.update();
+    }
+```
+
+
+
+#### 2.3.3 特殊过滤
 
 ```java
 
 // 通过字段排序 Order   Asc
 
-
 // 只查询一条数据
 wrapper.last(" limit 1");
 ```
+
+#### 
 
 ### 2.4 动态SQL（配置SQL）
 
