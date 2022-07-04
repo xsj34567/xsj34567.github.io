@@ -62,9 +62,16 @@ public List<RoleListRet> listByUser(RoleListReq req) {
                 .eq(Util.notEmpty(req.getUserId()), SysUser::getId, req.getUserId())  // ***
                 .eq(Util.notEmpty(req.getUserName()), SysUser::getUserName, req.getUserName()) // ***
                 .and(t -> handleQueryWrapper(t, req));
+    	// 排序
         ew.orderByAsc(SysRole::getRoleSort);
         return baseMapper.selectJoinList(RoleListRet.class, ew);
     }
+
+// or and 问题
+QueryWrapper userWrapper = new QueryWrapper();
+userWrapper.eq("name", name); 
+userWrapper.and(wrapper ->wrapper.eq("pwd", pwd).or().eq("phone", phone));
+// select * from user where name ='?' and (pwd='?' or phone ='?')
 ```
 
 #### 2.3.2 更新
@@ -88,12 +95,11 @@ public boolean updateUserStatus(UserUpdateReq req) {
 ```java
 
 // 通过字段排序 Order   Asc
+wrapper.orderByAsc(SysRole::getRoleSort);
 
 // 只查询一条数据
 wrapper.last(" limit 1");
 ```
-
-#### 
 
 ### 2.4 动态SQL（配置SQL）
 
@@ -109,14 +115,10 @@ public interface SkCommonMsgMapper extends MPJBaseMapper<SkCommonMsg> {
 
 [MP动态SQL查询-参考](https://www.cnblogs.com/zimug/archive/2020/07/10/13277392.html)
 
-[Gitee](https://gitee.com/baomidou/mybatis-plus)
-
 ### 参考
 
 [mybatis-plus](https://www.oschina.net/p/mybatis-plus?hmsr=aladdin1e1)
 
 [Gitee](https://gitee.com/baomidou/mybatis-plus)
 
-### 参考
-
-[mybatis-plus](https://www.oschina.net/p/mybatis-plus?hmsr=aladdin1e1)
+[Mysql Grant](https://blog.csdn.net/wwppp987/article/details/123983250)
