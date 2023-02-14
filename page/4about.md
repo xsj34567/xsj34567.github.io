@@ -39,16 +39,19 @@ type: page
 [支付开发包 xxpay ](https://gitee.com/jmdhappy/xxpay-master/commits/master)
 
 `项目演练：`
-[mall项目是一套电商系统](https://github.com/macrozheng/mall)
-[mall-swarm](https://github.com/macrozheng/mall-swarm)
+
+[RuoYi](https://gitee.com/y_project/RuoYi)、
+
+[mall项目是一套电商系统](https://github.com/macrozheng/mall)、
+[mall-swarm](https://github.com/macrozheng/mall-swarm)、
 [mall-admin-web](https://github.com/macrozheng/mall-admin-web)
 
 `技术：`
-[没长正的技术专栏 https://blog.meizhangzheng.com](https://blog.meizhangzheng.com)
+[没长正的技术专栏 https://blog.meizhangzheng.com](https://blog.meizhangzheng.com)、
 [常用工具网站](http://www.cxy521.com/)
 
 `资源：`
-[鸠摩搜索](https://www.jiumodiary.com)
+[鸠摩搜索](https://www.jiumodiary.com)、
 [算法](https://github.com/labuladong/fucking-algorithm)
 
 `标准：`
@@ -60,13 +63,15 @@ type: page
 
 `进阶：`
 
-[Java全栈知识体系(https://www.pdai.tech/)
+[Java全栈知识体系](https://www.pdai.tech/)、
 
-[互联网-java-工程师进阶知识完全扫盲](https://doocs.github.io/advanced-java/#/?id=%E4%BA%92%E8%81%94%E7%BD%91-java-%E5%B7%A5%E7%A8%8B%E5%B8%88%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86%E5%AE%8C%E5%85%A8%E6%89%AB%E7%9B%B2)
-[微服务-程序猿DD](http://blog.didispace.com/)
-[MrBird](https://mrbird.cc/)
+[互联网-java-工程师进阶知识完全扫盲](https://doocs.github.io/advanced-java/#/?id=%E4%BA%92%E8%81%94%E7%BD%91-java-%E5%B7%A5%E7%A8%8B%E5%B8%88%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86%E5%AE%8C%E5%85%A8%E6%89%AB%E7%9B%B2)、
 
-[廖雪峰博客](https://www.liaoxuefeng.com/)
+[微服务-程序猿DD](http://blog.didispace.com/)、
+
+[MrBird](https://mrbird.cc/)、
+
+[廖雪峰博客](https://www.liaoxuefeng.com/)、
 
 [阮一峰的个人网站](https://www.ruanyifeng.com/)
 
