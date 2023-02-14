@@ -34,7 +34,7 @@ type: page
 
 [微信开发 Java SDK](https://github.com/Wechat-Group/WxJava)
 
-[具体demo地址：https://gitee.com/binary/weixin-java-tools/blob/master/demo.md](https://gitee.com/binary/weixin-java-tools/blob/master/demo.md)
+[具体demo地址：https://gitee.com/binary/weixin-java-tools/blob/master/demo.md](https://gitee.com/binary/weixin-java-tools#/binary/weixin-java-tools/blob/develop/CONTRIBUTING.md)
 
 [支付开发包 xxpay ](https://gitee.com/jmdhappy/xxpay-master/commits/master)
 
@@ -45,7 +45,7 @@ type: page
 
 `技术：`
 [没长正的技术专栏 https://blog.meizhangzheng.com](https://blog.meizhangzheng.com)
-[常用工具网站](http://tooool.org/)
+[常用工具网站](http://www.cxy521.com/)
 
 `资源：`
 [鸠摩搜索](https://www.jiumodiary.com)
