@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MySQL之InnoDB"
+title: "MySQL之InnoDB架构"
 date: 2014-01-5 17:17:21
 categories: DB MySQL
 tags: MySQL InnoDB
