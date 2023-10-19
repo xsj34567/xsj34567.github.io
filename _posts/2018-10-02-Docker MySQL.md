@@ -19,10 +19,8 @@ tags: Docker MySQL 容器 实战
 ### 1.拉取镜像
 
 ```shell
-
 # docker pull meizhangzheng/mysql:8.022
 docker pull mysql:8.0.11
-
 ```
 
 ### 2. 初始化
@@ -356,6 +354,18 @@ FLUSH PRIVILEGES;
 
 # 通过navicate 即可连接
 
+```
+
+### 二、基于安装包安装
+
+```shell
+
+# 安装发布的版本   archives(归档版本，无需再打包，解压、配置即可)
+https://downloads.mysql.com/archives/community/
+
+# 文件以 .tar.gz结尾 
+
+# 通过日志中查看mysql初始密码
 ```
 
 ```sql
