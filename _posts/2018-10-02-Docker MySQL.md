@@ -1,18 +1,17 @@
 ---
 layout: post
-title:  "Docker MySQL"
-date:   2018-10-02 
+title: 'Docker MySQL'
+date: 2018-10-02
 categories: Docker MySQL 实战
 tags: Docker MySQL 容器 实战
 ---
 
-* content
-{:toc}
+- content
+  {:toc}
 
 ## Docker MySQL
 
-   基于Docker，安装MySQL。
-
+基于 Docker，安装 MySQL。
 
 ### 一、安装步骤
 
@@ -33,9 +32,9 @@ mkdir -p /usr/local/mysqlData/test/data
 vi /usr/local/mysqlData/test/cnf/my.cnf
 ```
 
-#### 2.2 配置my.cnf
+#### 2.2 配置 my.cnf
 
-配置来源与mysql 8 的my.ini文件，修改了其中的路径信息 
+配置来源与 mysql 8 的 my.ini 文件，修改了其中的路径信息
 
 ```shell
 [client]
@@ -52,11 +51,11 @@ no-beep=
 
 # SERVER SECTION
 # ----------------------------------------------------------------------
-# 
+#
 # The following options will be read by the MySQL Server. Make sure that
-# you have installed the server correctly (see above) so it reads this 
+# you have installed the server correctly (see above) so it reads this
 # file.=
-# 
+#
 # server_type=3
 [mysqld]
 
@@ -313,7 +312,6 @@ loose_mysqlx_port=33060
 
 ### 3.启动服务
 
-
 ```shell
 # mysql 8 不推荐使用软链接
 
@@ -340,6 +338,8 @@ myql -uroot -p
 select user,host,authentication_string from mysql.user;
 
 # 设置权限（为root分配权限，以便可以远程连接）
+update user set host = '%' where user = 'root';
+
 grant all PRIVILEGES on *.* to root@'%' WITH GRANT OPTION;
 
 # 由于Mysql5.6以上的版本修改了Password算法，这里需要更新密码算法，便于使用Navicat连接
@@ -363,7 +363,7 @@ FLUSH PRIVILEGES;
 # 安装发布的版本   archives(归档版本，无需再打包，解压、配置即可)
 https://downloads.mysql.com/archives/community/
 
-# 文件以 .tar.gz结尾 
+# 文件以 .tar.gz结尾
 
 # 通过日志中查看mysql初始密码
 ```
@@ -375,4 +375,3 @@ select '自己有才是真的有';
 ### 参考文档
 
 [Docker 部署 Mysql8.0](https://blog.csdn.net/xsj34567/article/details/80940238#comments_13664456)
-
