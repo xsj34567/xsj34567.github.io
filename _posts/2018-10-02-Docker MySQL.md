@@ -351,10 +351,13 @@ grant all PRIVILEGES on *.* to root@'%' WITH GRANT OPTION;
 # ALTER user 'root'@'%' IDENTIFIED BY '123456' PASSWORD EXPIRE NEVER;
 ALTER user 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
 
-# 异常问题：You must reset your password using ALTER USER statement before executing this statement
+# 异常问题1：You must reset your password using ALTER USER statement before executing this statement
 
 alter user 'root'@'localhost' identified by '123456'; #改密码方式一
 alter user USER() identified by '123456'; 			   #改密码方式二
+
+# 异常问题2： caching_sha2_password not be loaded:xxxx
+ ALTER user 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
 
 # 提交
 FLUSH PRIVILEGES;
