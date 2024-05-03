@@ -11,6 +11,8 @@ tags: Docker MySQL 容器 实战
 
 ## Docker MySQL
 
+[非 Docker 安装 MySQL](https://www.runoob.com/mysql/mysql-install.html)
+
 基于 Docker，安装 MySQL。
 
 ### 一、安装步骤
@@ -348,6 +350,14 @@ grant all PRIVILEGES on *.* to root@'%' WITH GRANT OPTION;
 # 更新密码算法（msyql 8.0 以上）
 # ALTER user 'root'@'%' IDENTIFIED BY '123456' PASSWORD EXPIRE NEVER;
 ALTER user 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
+
+# 异常问题1：You must reset your password using ALTER USER statement before executing this statement
+
+alter user 'root'@'localhost' identified by '123456'; #改密码方式一
+alter user USER() identified by '123456'; 			   #改密码方式二
+
+# 异常问题2： caching_sha2_password not be loaded:xxxx
+ ALTER user 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
 
 # 提交
 FLUSH PRIVILEGES;
