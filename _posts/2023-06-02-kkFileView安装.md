@@ -54,15 +54,21 @@ cd kkFileView/bin/
 ./install.sh
 
 # 查看office 版本
- ./soffice --version
+ ./office --version
 
 # 启动服务
 cd /opt/file-preivew/kkFileView-4.1.0-SNAPSHOT/bin
 
+./startup.sh
+
+# 停止服务
  ./shutdown.sh
 
 # 查看日志
 cat /opt/file-preivew/kkFileView-4.1.0-SNAPSHOT/log/kkFileView.log
+
+# 访问地址
+http://127.0.0.1:8012/index
 
 
 ```
