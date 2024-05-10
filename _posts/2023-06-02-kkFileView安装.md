@@ -1,17 +1,18 @@
 ---
 layout: post
-title: "kkFileView安装"
+title: 'kkFileView安装'
 date: 2023-06-02
 categories: kkFileView 安装
 tags: kkFileView 安装
 updateTime: 2023-06-02
 ---
 
-* content
-{:toc}
+- content
+  {:toc}
+
 ## kkFileView
 
-[kkFileView官网](http://kkfileview.keking.cn/zh-cn/index.html)](https://help.fanruan.com/finereport/)
+[kkFileView 官网](http://kkfileview.keking.cn/zh-cn/index.html)](https://help.fanruan.com/finereport/)
 
 ### 1.下载地址
 
@@ -29,9 +30,9 @@ updateTime: 2023-06-02
 
 #### 2.1 wins 安装
 
-> 下载对应的版本，并解压，注意需要安装JDK及及其配置，解压之后进入bin目录，
+> 下载对应的版本，并解压，注意需要安装 JDK 及及其配置，解压之后进入 bin 目录，
 >
-> 运行startup.bat即可。
+> 运行 startup.bat 即可。
 
 #### 2.2 linux 安装
 
@@ -45,13 +46,16 @@ updateTime: 2023-06-02
 # 拉取安装包
 wget https://kkfileview.keking.cn/kkFileView-4.1.0.tar.gz
 
+# 解压 并重命名
+tar -zxvf kkFileView-4.1.0.tar.gz && mv kkFileView-4.1.0 kkFileView
+
 # 安装依赖组件
 cd kkFileView/bin/
 ./install.sh
 
 # 查看office 版本
  ./soffice --version
- 
+
 # 启动服务
 cd /opt/file-preivew/kkFileView-4.1.0-SNAPSHOT/bin
 
@@ -74,10 +78,10 @@ docker run -it -p 8012:8012 keking/kkfileview:4.1.0
 
 访问地址：127.0.0.1:8012/index
 
-<font color='red'>如果需要修改指定页面参数，可以通过rar 压缩包方式打开，或者解压，修改之后，再覆盖</font>
+<font color='red'>如果需要修改指定页面参数，可以通过 rar 压缩包方式打开，或者解压，修改之后，再覆盖</font>
 
 ### 参考
 
-[kkFileView官网](http://kkfileview.keking.cn/zh-cn/index.html)
+[kkFileView 官网](http://kkfileview.keking.cn/zh-cn/index.html)
 
-[kkFileView安装](https://blog.csdn.net/codeSmart/article/details/127918844)
+[kkFileView 安装](https://blog.csdn.net/codeSmart/article/details/127918844)
